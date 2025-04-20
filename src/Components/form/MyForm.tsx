@@ -6,7 +6,7 @@ import { Input } from "../ui/input";
 import { useState } from "react";
 import { Button } from "@/Components/ui/button";
 
-export default function MyForm() {
+const MyForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mss, setMss] = useState("");
@@ -64,4 +64,5 @@ export default function MyForm() {
       </Button>
     </form>
   );
-}
+};
+export default MyForm;

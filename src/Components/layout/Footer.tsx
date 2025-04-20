@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import footerbgimg from "../../../public/footerbgimg.png";
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="bg-[#191a20] pt-16 md:pt-20">
       <div className="mx-auto px-4 max-w-[1232px]">
@@ -203,4 +203,5 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+export default Footer;

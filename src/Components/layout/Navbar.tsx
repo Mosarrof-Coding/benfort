@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
-export default function Navbar() {
+const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [menu, setMenu] = useState(false);
@@ -189,4 +189,5 @@ export default function Navbar() {
       </div>
     </header>
   );
-}
+};
+export default Navbar;

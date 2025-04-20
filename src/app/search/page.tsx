@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Cards } from "@/Components/home/listing/Cards";
 import { Switch } from "@/Components/ui/switch";
+import { Cards } from "@/Components/home/listing/Cards";
 
 const Search = () => {
   return (
