@@ -14,7 +14,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY >= 280);
+      setIsSticky(window.scrollY >= 4);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -154,18 +154,20 @@ const Navbar = () => {
                   </div>
                 </div>
                 {/* navlink */}
-                <div className="flex flex-col gap-2 pb-8">
-                  {["Properties", "Search", "Agent"].map((item, i) => (
+
+                <div className="flex flex-col gap-2 py-8">
+                  {navLink.map((item, i) => (
                     <Link
                       key={i}
-                      href="/"
+                      href={item.href}
+                      className="px-4 py-1 w-fit font-normal text-[14px] md:text-[16px] leading-[22px] lg:leading-[24px] hover:tracking-[2px] transition-all"
                       onClick={() => setMenu(false)}
-                      className="px-4 py-2 w-fit font-normal text-[14px] md:text-[16px] leading-[22px] lg:leading-[24px] hover:tracking-[2px] transition-all"
                     >
-                      {item}
+                      {item.name}
                     </Link>
                   ))}
                 </div>
+
                 <div className="flex flex-col gap-2 pt-8 border-t border-border">
                   <Link
                     href=""

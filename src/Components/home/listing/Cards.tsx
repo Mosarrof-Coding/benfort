@@ -104,7 +104,7 @@ export const Cards = () => {
               alt="propertyImg1 image"
               placeholder="blur"
             />
-            <div className="top-0 left-0 absolute flex justify-between gap-2 lg:gap-4 p-2 md:p-3 lg:p-5 w-full h-full font-light text-sm">
+            <div className="top-0 left-0 absolute flex justify-between gap-2 lg:gap-4 p-2 md:p-1 lg:p-2 xl:p-5 w-full h-full font-light text-sm">
               <div className="flex justify-between items-end gap-4 w-full">
                 <div className="flex gap-1 lg:gap-2">
                   <span className="bg-popover px-2 lg:px-3 py-1 lg:py-1.5 rounded-[6px] font-normal text-[12px] text-foreground leading-[18px]">
