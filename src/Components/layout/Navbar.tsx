@@ -41,10 +41,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={`z-50 bg-background/80 dark:bg-card backdrop-blur-lg  w-full transition-all transform duration-1000 ${
+      className={`z-50 bg-background/80 dark:bg-card backdrop-blur-lg w-full transition-all transform duration-500 ${
         isSticky
-          ? "fixed left-0 top-0 w-full shadow-lg py-1 md:py-2 lg:py-3 xl:py-4 transition-all duration-500"
-          : "py-2 md:py-4 lg:py-6 transition-all duration-500"
+          ? "fixed left-0 top-0 w-full shadow-lg py-1 md:py-2 lg:py-3 xl:py-4"
+          : "py-2 md:py-4 lg:py-6"
       }`}
     >
       <div className={`mx-auto px-4 max-w-[1232px] transition`}>

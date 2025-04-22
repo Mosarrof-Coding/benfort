@@ -4,6 +4,7 @@ import Navbar from "@/Components/layout/Navbar";
 import { ThemeProvider } from "next-themes";
 import localFont from "next/font/local";
 import Footer from "@/Components/layout/Footer";
+import { CardProvider } from "@/Components/context/Context";
 
 const lexend = localFont({
   src: "../fonts/Lexend.ttf",
@@ -83,7 +84,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="flex-grow">{children}</main>
+          <CardProvider>
+            <main className="flex-grow">{children}</main>
+          </CardProvider>
           <Footer />
         </ThemeProvider>
       </body>
