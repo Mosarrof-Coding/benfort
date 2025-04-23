@@ -27,7 +27,7 @@ type Property = {
 const CardContext = createContext<any>(null);
 
 export const CardProvider = ({ children }: { children: React.ReactNode }) => {
-  const [properties, setProperties] = useState<Property[]>([
+  const [cardData, setCardData] = useState<Property[]>([
     {
       id: 1,
       image: propertyImg1,
@@ -111,7 +111,7 @@ export const CardProvider = ({ children }: { children: React.ReactNode }) => {
   ]);
 
   return (
-    <CardContext.Provider value={{ properties, setProperties }}>
+    <CardContext.Provider value={{ cardData, setCardData }}>
       {children}
     </CardContext.Provider>
   );

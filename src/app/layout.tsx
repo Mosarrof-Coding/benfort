@@ -17,11 +17,11 @@ const bricolage = localFont({
 // seo part
 export const metadata: Metadata = {
   title: {
-    default: "Benport",
-    template: "%s | Benport",
+    default: "benfort",
+    template: "%s | benfort",
   },
   description:
-    "Benport — A premium real estate platform helping you find, buy, and sell properties with confidence.",
+    "benfort — A premium real estate platform helping you find, buy, and sell properties with confidence.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     "real estate",
-    "Benport",
+    "benfort",
     "property listings",
     "buy property",
     "sell property",
@@ -37,20 +37,20 @@ export const metadata: Metadata = {
     "housing market",
     "real estate website",
   ],
-  authors: [{ name: "Benport Team", url: "https://benport.com" }],
-  creator: "Benport",
+  authors: [{ name: "benfort Team", url: "https://benfort.com" }],
+  creator: "benfort",
   openGraph: {
-    title: "Benport Real Estate",
+    title: "benfort Real Estate",
     description:
-      "Explore the latest property listings, homes, and real estate trends on Benport.",
-    url: "https://benport.com",
-    siteName: "Benport",
+      "Explore the latest property listings, homes, and real estate trends on benfort.",
+    url: "https://benfort.com",
+    siteName: "benfort",
     images: [
       {
         url: "/og-image.jpg", // Place in /public folder
         width: 1200,
         height: 630,
-        alt: "Benport - Real Estate Solutions",
+        alt: "benfort - Real Estate Solutions",
       },
     ],
     locale: "en_US",
@@ -58,13 +58,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Benport Real Estate",
+    title: "benfort Real Estate",
     description:
-      "Buy, sell, and explore premium real estate listings on Benport.",
+      "Buy, sell, and explore premium real estate listings on benfort.",
     images: ["/og-image.jpg"],
-    creator: "@BenportOfficial", // Optional
+    creator: "@benfortOfficial", // Optional
   },
-  metadataBase: new URL("https://benport.com"),
+  metadataBase: new URL("https://benfort.com"),
 };
 
 export default function RootLayout({

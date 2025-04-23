@@ -12,6 +12,7 @@ import florediagram from "@/../public/property/florediagram.png";
 import { BedDouble } from "lucide-react";
 import { useRef, useState } from "react";
 import { Cards } from "@/Components/home/listing/Cards";
+import { useCard } from "@/Components/context/Context";
 const properties = [
   {
     id: 1,
@@ -69,15 +70,23 @@ layout, evident throughout the entire community.`,
 const Properties = () => {
   const [activePlane, setActivePlane] = useState(1);
 
+  // video
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
-
   const handlePlay = () => {
     if (videoRef.current) {
       videoRef.current.play();
       setPlaying(true);
     }
   };
+
+  // crads
+  const { cardData } = useCard();
+
+  const categoryFilter = cardData.filter(
+    (category: { locate: string }) => category.locate === "Catskills"
+  );
+  console.log("categoryFilter", categoryFilter);
 
   return (
     <section className="">
