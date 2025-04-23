@@ -2,6 +2,7 @@
 
 import { Menu, Moon, RotateCcw, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
@@ -9,6 +10,7 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [menu, setMenu] = useState(false);
+  const pathName = usePathname();
 
   const [isSticky, setIsSticky] = useState(false);
 
@@ -62,7 +64,10 @@ const Navbar = () => {
               <Link
                 key={i}
                 href={item.href}
-                className="font-normal text-[14px] md:text-[16px] hover:text-destructive leading-[22px] lg:leading-[24px] transition-all"
+                className={`
+                  font-normal text-[14px] md:text-[16px] hover:text-destructive leading-[22px] lg:leading-[24px] transition-all ${
+                    pathName === item.href ? "text-destructive" : ""
+                  }`}
               >
                 {item.name}
               </Link>

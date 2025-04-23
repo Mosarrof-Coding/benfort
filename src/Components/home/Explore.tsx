@@ -38,7 +38,7 @@ export const Explore = () => {
                 <Image
                   src={dreamhouseimage}
                   alt="dreamhouseimage"
-                  className=""
+                  className="max-w-full sm:max-w-[200px] md:max-w-[230px] lg:max-w-full"
                 />
                 <div className="top-full left-0 absolute bg-background dark:bg-card px-[19px] py-3 rounded-[8px] sm:rounded-[16px] -translate-y-1/2">
                   <div className="flex">
@@ -61,12 +61,16 @@ export const Explore = () => {
                 </div>
               </div>
             </div>
-            <div className="mx-auto dreamImage">
-              <Image src={Background} alt="Background" className="" />
+            <div className="hidden sm:flex items-center mx-auto">
+              <Image
+                src={Background}
+                alt="Background"
+                className="max-w-full sm:max-w-[200px] md:max-w-[230px] lg:max-w-full"
+              />
             </div>
           </div>
           {/* text */}
-          <div className="bg-muted dark:bg-card mt-12 sm:mt-0 p-3 sm:p-4 lg:p-6 rounded-[12px] lg:rounded-[16px] max-w-full sm:max-w-[428px] content shrink-2">
+          <div className="bg-muted dark:bg-card mt-12 sm:mt-0 p-3 sm:p-4 lg:p-6 rounded-[12px] lg:rounded-[16px] max-w-full lg:max-w-[428px] content shrink-2">
             <p className="mb-16 sm:mb-20 lg:mb-20 font-normal text-[16px] leading-[22px] sm:leading-[24px]">
               “We believe there&#39;s a perfect home for everybody, no matter
               the budget. That&#39;s why we always find the best homes for your

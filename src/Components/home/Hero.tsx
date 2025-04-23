@@ -6,18 +6,12 @@ import dream1 from "@/../public/hero/dreem1.svg";
 export const Hero = () => {
   return (
     <div className="pt-12 sm:pt-14 md:pt-16 lg:pt-18 pb-13 sm:pb-15 md:pb-18 lg:pb-20">
-      <div className="mx-auto px-4 max-w-[1232px] myContizer">
+      <div className="mx-auto px-3 max-w-[1224px] myContizer">
         <div className="pb-10 md:pb-14 lg:pb-22 text-center heading">
-          <h1 className="mx-auto mb-3 sm:mb-4 lg:mb-[26px] w-fit font-medium text-[30px] sm:text-[44px] md:text-[60px] lg:text-[81px] leading-[1] tracking-[-2px] sm:tracking-[-4px]">
+          <h1 className="mx-auto mb-3 sm:mb-4 lg:mb-[26px] w-fit font-medium text-[34px] sm:text-[44px] md:text-[60px] lg:text-[81px] leading-[1] tracking-[-1px] md:tracking-[-2px] lg:tracking-[-4px]">
             <span className="md:px-4 lg:px-[28px]">
-              Find the{" "}
-              <span
-                className="text-destructive
-"
-              >
-                {" "}
-                perfect
-              </span>
+              Find the <br className="md:hidden" />{" "}
+              <span className="text-destructive"> perfect</span>
             </span>
             <span className="inline-block px-3 md:px-px md:pl-6">
               <Image

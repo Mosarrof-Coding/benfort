@@ -94,13 +94,11 @@ export const Cards = () => {
   return (
     <>
       {cardsContents.map((card) => (
-        <div className="mx-auto pb-4 lg:pb-6 perkCard shrink-2" key={card.id}>
+        <div className="mx-auto pb-4 lg:pb-6 w-full perkCard" key={card.id}>
           <div className="relative w-full">
             <Image
               src={card.image}
               alt="propertyImg1 image"
-              width={1000}
-              height={1000}
               placeholder="blur"
               className="w-full"
             />
