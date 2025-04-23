@@ -9,10 +9,9 @@ import property5 from "@/../public/property/Property5.png";
 import agents from "@/../public/property/agentFml.png";
 import florediagram from "@/../public/property/florediagram.png";
 // import florediagram from "@/../public/property/videothumb.png";
-import { BedDouble } from "lucide-react";
+import { BedDouble, SquareChevronRight } from "lucide-react";
 import { useRef, useState } from "react";
 import { Cards } from "@/Components/home/listing/Cards";
-import { useCard } from "@/Components/context/Context";
 const properties = [
   {
     id: 1,
@@ -69,7 +68,7 @@ layout, evident throughout the entire community.`,
 
 const Properties = () => {
   const [activePlane, setActivePlane] = useState(1);
-
+  const [filter, setFilter] = useState(false);
   // video
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
@@ -80,20 +79,24 @@ const Properties = () => {
     }
   };
 
-  // crads
-  const { cardData } = useCard();
-
-  const categoryFilter = cardData.filter(
-    (category: { locate: string }) => category.locate === "Catskills"
-  );
-  console.log("categoryFilter", categoryFilter);
-
   return (
     <section className="">
       <div className="mx-auto px-4 w-fit lg:max-w-[1456px]">
         <div className="flex gap-2 my-2">
+          <button
+            className="md:hidden top-1/2 left-0 fixed cursor-pointer"
+            onClick={() => setFilter(!filter)}
+          >
+            <SquareChevronRight size={16} />
+          </button>
           {/* pagination & profile */}
-          <div className="relative flex flex-col justify-center items-center gap-3 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[88vh]">
+          <div
+            className={`
+          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-3 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[90vh] ${
+            filter ? "" : "hidden md:flex"
+          }
+            `}
+          >
             <Link
               href="/"
               className="group place-items-center grid hover:bg-foreground rounded-[8px] lg:rounded-[12px] w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12"
@@ -252,7 +255,7 @@ const Properties = () => {
             >
               <div className="gap-6 grid grid-cols-1 md:grid-cols-2">
                 {/* images */}
-                <div className="flex flex-col gap-2">
+                <div className="top-12 sm:top-14 md:top-16 lg:top-20 md:sticky flex flex-col gap-2 h-fit">
                   <Image
                     src={property.image}
                     alt="property1 image"
@@ -974,7 +977,7 @@ const Properties = () => {
                   <p className="mb-4 text-[12px]">MAP</p>
                   <div className="rounded-[8px] lg:rounded-[12px] w-full overflow-hidden">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24176.915709109616!2d-74.0059413!3d40.7127755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDQyJzQ2LjAiTiA3NMKwMDAnMzAuMCJX!5e0!3m2!1sen!2sus!4v1616108591234!5m2!1sen!2sus"
+                      src="https://www.google.com/maps?q=52.37589,4.89131&hl=es;z=14&output=embed"
                       style={{ border: 0 }}
                       allowFullScreen={true}
                       loading="lazy"

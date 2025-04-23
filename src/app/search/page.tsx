@@ -3,15 +3,29 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Switch } from "@/Components/ui/switch";
 import { Cards } from "@/Components/home/listing/Cards";
+import { SquareChevronRight } from "lucide-react";
 
 const Search = () => {
   const [filter, setFilter] = useState(false);
+  const [pagin, setPagin] = useState(false);
   return (
     <section className="">
       <div className="mx-auto px-4 w-fit lg:max-w-[1464px]">
         <div className="flex gap-2 my-2">
+          <button
+            className="md:hidden top-1/2 left-0 fixed cursor-pointer"
+            onClick={() => setPagin(!pagin)}
+          >
+            <SquareChevronRight size={16} />
+          </button>
           {/* pagination & profile */}
-          <div className="relative flex flex-col justify-center items-center gap-3 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[88vh]">
+          <div
+            className={`
+          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-3 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[90vh] ${
+            pagin ? "" : "hidden md:flex"
+          }
+            `}
+          >
             <Link
               href="/"
               className="group place-items-center grid hover:bg-foreground rounded-[8px] lg:rounded-[12px] w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12"
@@ -163,11 +177,11 @@ const Search = () => {
             </Link>
           </div>
           {/* image gallery */}
-          <div className="relative flex gap-2 gallery">
+          <div className="relative flex gap-2 overflow-hidden gallery">
             {/* filter */}
             <div
-              className={`top-0 left-0 z-20 lg:static absolute bg-background shadow-lg lg:shadow-none border border-border rounded-[8px] lg:rounded-[12px] lg:max-w-[371px] min-h-screen shrink-0 filter ${
-                filter ? "" : "hidden lg:block"
+              className={`top-0 z-20 lg:sticky absolute bg-background shadow-lg lg:shadow-none border border-border rounded-[8px] lg:rounded-[12px] lg:max-w-[371px] min-h-screen shrink-0 filter transition-transform duration-1000 ${
+                filter ? "left-0 " : "-left-full  lg:block"
               }`}
             >
               <h4 className="p-[12px_14px_14px_14px] md:p-[18px_20px_20px_20px] lg:p-[22px_20px_24px_24px] border-b border-border text-xl lg:text-2xl leading-[34px] tracking-[-1.4px]">
@@ -474,7 +488,7 @@ const Search = () => {
                   onClick={() => setFilter(!filter)}
                 />
               </div>
-              <div className="gap-3 lg:gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2 lg:p-4 cardContainer">
+              <div className="gap-3 lg:gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-2 lg:p-4 cardContainer">
                 <Cards />
               </div>
             </div>

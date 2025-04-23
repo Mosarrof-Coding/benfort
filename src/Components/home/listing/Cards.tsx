@@ -94,17 +94,17 @@ export const Cards = () => {
   return (
     <>
       {cardsContents.map((card) => (
-        <div
-          className="mx-auto pb-4 lg:pb-6 max-w-fit perkCard shrink-2"
-          key={card.id}
-        >
-          <div className="relative">
+        <div className="mx-auto pb-4 lg:pb-6 perkCard shrink-2" key={card.id}>
+          <div className="relative w-full">
             <Image
               src={card.image}
               alt="propertyImg1 image"
+              width={1000}
+              height={1000}
               placeholder="blur"
+              className="w-full"
             />
-            <div className="top-0 left-0 absolute flex justify-between gap-2 lg:gap-4 p-2 md:p-1 lg:p-2 xl:p-5 w-full h-full font-light text-sm">
+            <div className="top-0 left-0 absolute flex justify-between gap-2 lg:gap-4 p-3 lg:p-2 xl:p-5 w-full h-full font-light text-sm">
               <div className="flex justify-between items-end gap-4 w-full">
                 <div className="flex gap-1 lg:gap-2">
                   <span className="bg-popover px-2 lg:px-3 py-1 lg:py-1.5 rounded-[6px] font-normal text-[12px] text-foreground leading-[18px]">
@@ -142,7 +142,7 @@ export const Cards = () => {
               </div>
             </div>
           </div>
-          <div className="mt-3 lg:mt-4 max-w-[384px]">
+          <div className="mt-3 lg:mt-4">
             <h5 className="mb-2 font-normal text-[18px] leading-[25px] sm:leading-[27px]">
               {card.title}
             </h5>
