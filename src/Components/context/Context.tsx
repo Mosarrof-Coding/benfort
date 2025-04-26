@@ -11,7 +11,7 @@ import { StaticImageData } from "next/image";
 
 type Property = {
   id: number;
-  image: StaticImageData; // or `StaticImageData` if you're using next/image
+  image: StaticImageData;
   title: string;
   details: string;
   roomType: string[];

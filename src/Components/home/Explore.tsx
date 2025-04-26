@@ -31,14 +31,14 @@ export const Explore = () => {
 "
                 >
                   Dream
-                  <br className="hidden md:block" /> home
+                  <br className="hidden lg:block" /> home
                 </span>
               </h2>
               <div className="relative mx-auto w-fit">
                 <Image
                   src={dreamhouseimage}
                   alt="dreamhouseimage"
-                  className="max-w-full sm:max-w-[200px] md:max-w-[230px] lg:max-w-full"
+                  className=""
                 />
                 <div className="top-full left-0 absolute bg-background dark:bg-card px-[19px] py-3 rounded-[8px] sm:rounded-[16px] -translate-y-1/2">
                   <div className="flex">
@@ -61,12 +61,8 @@ export const Explore = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden sm:flex items-center mx-auto">
-              <Image
-                src={Background}
-                alt="Background"
-                className="max-w-full sm:max-w-[200px] md:max-w-[230px] lg:max-w-full"
-              />
+            <div className="hidden md:hidden sm:flex lg:flex items-center mx-auto">
+              <Image src={Background} alt="Background" className="" />
             </div>
           </div>
           {/* text */}
@@ -106,7 +102,7 @@ export const Explore = () => {
                 Loan & low Interest facility
               </li>
             </ul>
-            <button className="bg-foreground dark:bg-white hover:opacity-80 px-2 md:px-3 py-1 md:py-2 rounded-[4px] font-normal text-[14px] text-white dark:text-background leading-[19px] sm:leading-[21px] active:translate-y-[-1px] cursor-pointer">
+            <button className="bg-foreground dark:bg-white hover:opacity-80 mt-5 lg:mt-0 px-2 md:px-3 py-1 md:py-2 rounded-[4px] font-normal text-[14px] text-white dark:text-background leading-[19px] sm:leading-[21px] active:translate-y-[-1px] cursor-pointer">
               Browse Listings
             </button>
           </div>

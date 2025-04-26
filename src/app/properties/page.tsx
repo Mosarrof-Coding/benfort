@@ -8,7 +8,6 @@ import property4 from "@/../public/property/Property4.png";
 import property5 from "@/../public/property/Property5.png";
 import agents from "@/../public/property/agentFml.png";
 import florediagram from "@/../public/property/florediagram.png";
-// import florediagram from "@/../public/property/videothumb.png";
 import { BedDouble, SquareChevronRight } from "lucide-react";
 import { useRef, useState } from "react";
 import { Cards } from "@/Components/home/listing/Cards";

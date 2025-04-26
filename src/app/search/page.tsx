@@ -180,13 +180,21 @@ const Search = () => {
           <div className="relative flex gap-2 overflow-hidden gallery">
             {/* filter */}
             <div
-              className={`top-0 z-20 lg:sticky absolute bg-background shadow-lg lg:shadow-none border border-border rounded-[8px] lg:rounded-[12px] lg:max-w-[371px] min-h-screen shrink-0 filter transition-transform duration-1000 ${
-                filter ? "left-0 " : "-left-full  lg:block"
+              className={`top-0 z-20 lg:static absolute bg-background shadow-lg lg:shadow-none border border-border rounded-[8px] lg:rounded-[12px] lg:max-w-[371px] shrink-0 transition duration-1000 h-screen ${
+                filter ? "left-0" : "-left-full lg:block"
               }`}
             >
-              <h4 className="p-[12px_14px_14px_14px] md:p-[18px_20px_20px_20px] lg:p-[22px_20px_24px_24px] border-b border-border text-xl lg:text-2xl leading-[34px] tracking-[-1.4px]">
-                Filters
-              </h4>
+              <div className="flex justify-between items-center gap-6">
+                <h4 className="p-[12px_14px_14px_14px] md:p-[18px_20px_20px_20px] lg:p-[22px_20px_24px_24px] border-b border-border text-xl lg:text-2xl leading-[34px] tracking-[-1.4px]">
+                  Filters
+                </h4>{" "}
+                <span
+                  className="lg:hidden mr-2 p-2 active:text-destructive text-xl cursor-pointer"
+                  onClick={() => setFilter(false)}
+                >
+                  X
+                </span>
+              </div>
               <form action="">
                 <div className="flex flex-col gap-6 lg:gap-8 p-2 xl:p-[16px_32px_16px_16px]">
                   {/* switch */}
@@ -432,7 +440,7 @@ const Search = () => {
                   </div>
                 </div>
                 {/* reset button */}
-                <div className="p-[18px_20px_20px_20px] lg:p-[22px_20px_24px_24px] border-t border-border">
+                <div className="hover:opacity-80 p-[18px_20px_20px_20px] lg:p-[22px_20px_24px_24px] border-t border-border">
                   <button className="py-2 lg:py-3 border border-border rounded-[8px] w-full font-normal text-base cursor-pointer">
                     Reset Search
                   </button>
