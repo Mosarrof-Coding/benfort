@@ -6,6 +6,7 @@ import feature3 from "@/../public/featured/feature3.png";
 import feature4 from "@/../public/featured/feature4.png";
 import mapwhite from "@/../public/featured/mapwhite.svg";
 import fbook from "@/../public/featured/fbooks.svg";
+import FadeIn from "../animation/FadIn";
 
 export const Featured = () => {
   const featuredData = [
@@ -50,35 +51,34 @@ export const Featured = () => {
           </p>
         </div>
         <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 mt-14 sm:mt-18 md:mt-20 lg:mt-26 propertiesContainer">
-          {featuredData.map((feature) => (
-            <div
-              className="relative rounded-[12px] overflow-hidden"
-              key={feature.id}
-            >
-              <Image src={feature.image} alt="featuredimg" />
-              <div className="bottom-0 left-0 absolute bg-gradient-to-b from-[#191a2000] to-[#191a20] p-2 sm:p-3 lg:p-4 pt-12 pb-[18px] w-full font-light text-sm">
-                <h5 className="mb-2 lg:mb-3 font-normal text-[16px] text-white lg:text-[18px] leading-[27px]">
-                  {feature.villa}
-                </h5>
-                <ul className="flex items-center gap-2 text-white">
-                  <li className="flex items-center gap-1">
-                    <Image src={mapwhite} alt="location" className="" />
-                    <p className="text-[#f4f4f4] text-[14px] leading-[16px] sm:leading-[18px]">
-                      {feature.locate}
-                    </p>
-                  </li>
-                  <li className="flex items-center gap-1">
-                    <span className="bg-[#f5f5f5] rounded-full w-2.5 h-2.5"></span>
-                  </li>
-                  <li className="flex items-center gap-1">
-                    <Image src={fbook} alt="fbook" />
-                    <p className="text-[#f4f4f4] text-[14px] leading-[16px] sm:leading-[18px]">
-                      {feature.vCount}
-                    </p>
-                  </li>
-                </ul>
+          {featuredData.map((feature, i) => (
+            <FadeIn key={feature.id} delay={i * 0.2}>
+              <div className="relative rounded-[12px] overflow-hidden">
+                <Image src={feature.image} alt="featuredimg" />
+                <div className="bottom-0 left-0 absolute bg-gradient-to-b from-[#191a2000] to-[#191a20] p-2 sm:p-3 lg:p-4 pt-12 pb-[18px] w-full font-light text-sm">
+                  <h5 className="mb-2 lg:mb-3 font-normal text-[16px] text-white lg:text-[18px] leading-[27px]">
+                    {feature.villa}
+                  </h5>
+                  <ul className="flex items-center gap-2 text-white">
+                    <li className="flex items-center gap-1">
+                      <Image src={mapwhite} alt="location" className="" />
+                      <p className="text-[#f4f4f4] text-[14px] leading-[16px] sm:leading-[18px]">
+                        {feature.locate}
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-1">
+                      <span className="bg-[#f5f5f5] rounded-full w-2.5 h-2.5"></span>
+                    </li>
+                    <li className="flex items-center gap-1">
+                      <Image src={fbook} alt="fbook" />
+                      <p className="text-[#f4f4f4] text-[14px] leading-[16px] sm:leading-[18px]">
+                        {feature.vCount}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>
