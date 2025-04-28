@@ -13,15 +13,15 @@ const Search = () => {
       <div className="mx-auto px-4 w-fit lg:max-w-[1464px]">
         <div className="flex gap-2 my-2">
           <button
-            className="md:hidden top-1/2 left-0 fixed cursor-pointer"
+            className="md:hidden top-1/2 left-0 z-20 fixed cursor-pointer"
             onClick={() => setPagin(!pagin)}
           >
-            <SquareChevronRight size={16} />
+            <SquareChevronRight size={16} className="" />
           </button>
           {/* pagination & profile */}
           <div
             className={`
-          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[90vh] ${
+          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[86vh] ${
             pagin ? "" : "hidden md:flex"
           }
             `}
@@ -180,16 +180,16 @@ const Search = () => {
           <div className="relative flex gap-2 overflow-hidden gallery">
             {/* filter */}
             <div
-              className={`top-0 z-20 lg:static absolute bg-background shadow-lg lg:shadow-none border border-border rounded-[8px] lg:rounded-[12px] lg:max-w-[371px] shrink-0 transition duration-1000 h-screen ${
+              className={`top-0 z-20 lg:static absolute bg-background/90 backdrop-blur-lg shadow-lg lg:shadow-none shadow-border border border-border rounded-[8px] lg:rounded-[12px] lg:max-w-[371px] shrink-0 transition duration-1000 ${
                 filter ? "left-0" : "-left-full lg:block"
               }`}
             >
-              <div className="flex justify-between items-center gap-6">
+              <div className="relative">
                 <h4 className="p-[12px_14px_14px_14px] md:p-[18px_20px_20px_20px] lg:p-[22px_20px_24px_24px] border-b border-border text-xl lg:text-2xl leading-[34px] tracking-[-1.4px]">
                   Filters
                 </h4>{" "}
                 <span
-                  className="lg:hidden mr-2 p-2 active:text-destructive text-xl cursor-pointer"
+                  className="lg:hidden top-[50%] right-0 absolute mr-2 p-2 active:text-destructive text-xl translate-y-[-50%] cursor-pointer"
                   onClick={() => setFilter(false)}
                 >
                   X
@@ -448,13 +448,13 @@ const Search = () => {
               </form>
             </div>
             {/* gallery */}
-            <div className="border border-border rounded-[8px] lg:rounded-[12px] cards">
+            <div className="sm:border border-border rounded-[8px] lg:rounded-[12px] cards">
               {/* mibileFilterAdd */}
-              <div className="flex items-center mibileFilterAdd">
-                <form className="flex items-center m-4 border border-border rounded-lg w-full overflow-hidden">
-                  <div className="p-2 md:p-3">
+              <div className="flex items-center gap-2 sm:gap-0 mibileFilterAdd">
+                <form className="flex items-center sm:mx-2 lg:mx-4 my-4 border border-border rounded-lg w-full overflow-hidden">
+                  <div className="flex items-center">
                     <svg
-                      className="w-6"
+                      className="m-2 md:m-3 w-6"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -482,21 +482,22 @@ const Search = () => {
                         </clipPath>
                       </defs>
                     </svg>
+                    <input
+                      type="text"
+                      placeholder="Search properties"
+                      className="px-0.5 py-2.5 border-none focus:border-none outline-none focus:outline-none w-full"
+                    />
                   </div>
-                  <input
-                    type="text"
-                    placeholder="Search properties"
-                    className="px-0.5 py-2.5 border-none focus:border-none outline-none focus:outline-none w-full"
-                  />
                 </form>
+                {/* filter btn */}
                 <input
                   type="button"
-                  className="lg:hidden mr-2 px-2 sm:px-4 py-2.5 border active:border-destructive rounded-lg outline-none focus:outline-none w-fit active:text-destructive transition-all cursor-pointer"
+                  className="lg:hidden sm:mr-2 px-2 sm:px-4 py-2.5 border active:border-destructive rounded-lg outline-none focus:outline-none w-fit active:text-destructive transition-all cursor-pointer"
                   value={"Filter"}
                   onClick={() => setFilter(!filter)}
                 />
               </div>
-              <div className="gap-3 lg:gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-2 lg:p-4 cardContainer">
+              <div className="gap-3 lg:gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:p-2 lg:p-4 cardContainer">
                 <Cards />
               </div>
             </div>

@@ -91,7 +91,7 @@ const Properties = () => {
           {/* pagination & profile */}
           <div
             className={`
-          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[90vh] ${
+          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[86vh] ${
             filter ? "" : "hidden md:flex"
           }
             `}
@@ -260,7 +260,6 @@ const Properties = () => {
                     alt="property1 image"
                     className="mx-auto rounded-[8px] lg:rounded-[12px] w-full"
                   />
-
                   <div className="gap-2 grid grid-cols-1 sm:grid-cols-2">
                     {property.thumbImage.map((thumb, i) => (
                       <div key={i}>
@@ -868,7 +867,7 @@ const Properties = () => {
                         minima! Maiores facilis distinctio libero quas dolorum.
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 lg:gap-4 planning">
+                    <div className="flex flex-wrap items-center gap-2 lg:gap-4 planning">
                       <button
                         className={`cursor-pointer px-3 lg:px-4 py-1.5 lg:py-2 rounded-[6px] lg:rounded-[8px] text-[12px] ${
                           activePlane === 1

@@ -5,9 +5,9 @@ export const Subscription = () => {
   return (
     <FadeIn>
       <div className="mx-auto px-4 max-w-[1120px]">
-        <div className="gap-8 lg:gap-14 grid grid-cols-1 md:grid-cols-2 bg-card mb-14 p-[38px_28px_50px_28px] lg:p-[88px_88px_90px_88px] rounded-[16px]">
-          <div className="textContainer">
-            <h3 className="mb-1 sm:mb-2 lg:mb-3 font-medium text-[20px] sm:text-[24px] lg:text-[28px] leading-[32px] sm:leading-[38px] lg:leading-[39px] tracking-[-1.5px]">
+        <div className="gap-8 lg:gap-14 grid grid-cols-1 md:grid-cols-2 bg-card mb-14 sm:p-[38px_28px_50px_28px] lg:p-[88px_88px_90px_88px] px-3 py-8 rounded-[16px]">
+          <div className="">
+            <h3 className="mb-1 sm:mb-2 lg:mb-3 font-medium text-[20px] sm:text-[24px] lg:text-[28px] leading-[30px] sm:leading-[38px] lg:leading-[39px] lg:tracking-[-1.5px] tracking-tight">
               There is always something new! Don’t miss out.
             </h3>
             <h6 className="font-normal text-[14px] leading-[21px]">
