@@ -21,7 +21,7 @@ const Search = () => {
           {/* pagination & profile */}
           <div
             className={`
-          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-3 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[90vh] ${
+          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[90vh] ${
             pagin ? "" : "hidden md:flex"
           }
             `}

@@ -24,11 +24,11 @@ export const Explore = () => {
             </span>
           </h2>
         </FadeIn>
-        <div className="flex sm:flex-row flex-col justify-between gap-2.5 mx-auto max-w-[1088px]">
-          <div className="flex md:flex-row flex-col justify-between gap-2 dreamImage">
+        <div className="flex sm:flex-row lg:flex-row flex-col md:flex-col justify-center gap-2.5 mx-auto max-w-[1088px]">
+          <div className="flex md:flex-row flex-col justify-center gap-2 dreamImage">
             <FadeIn>
               <div className="dreamHeadingr">
-                <h2 className="hidden md:block mb-4 font-medium text-[26px] sm:text-[32px] lg:text-[40px] leading-[40px] sm:leading-[46px] lg:leading-[48px] tracking-[-1px] sm:tracking-[-2px]">
+                <h2 className="hidden md:block mb-4 max-w-[320px] font-medium text-[26px] sm:text-[32px] lg:text-[40px] leading-[40px] sm:leading-[46px] lg:leading-[48px] tracking-[-1px] sm:tracking-[-2px]">
                   Explore & Find <br className="hidden lg:block" /> your{" "}
                   <span className="text-destructive">
                     Dream
@@ -39,9 +39,9 @@ export const Explore = () => {
                   <Image
                     src={dreamhouseimage}
                     alt="dreamhouseimage"
-                    className=""
+                    className="min-w-[210px]"
                   />
-                  <div className="top-full left-0 absolute bg-background dark:bg-card px-[19px] py-3 rounded-[8px] sm:rounded-[16px] -translate-y-1/2">
+                  <div className="top-full left-0 absolute bg-background dark:bg-card px-3 lg:px-[19px] py-3 rounded-[8px] sm:rounded-[16px] -translate-y-1/2">
                     <div className="flex">
                       <div className="bg-white/5 shadow-[0px_8px_12px_rgba(0,0,0,0.08)] border-[2px] border-border rounded-full w-fit">
                         <Image src={dream1} alt="dream1" />
@@ -64,14 +64,18 @@ export const Explore = () => {
               </div>
             </FadeIn>
             <FadeIn delay={0.3}>
-              <div className="hidden md:hidden sm:flex lg:flex items-center mx-auto">
-                <Image src={Background} alt="Background" className="" />
+              <div className="flex flex-col justify-center h-full">
+                <Image
+                  src={Background}
+                  alt="Background"
+                  className="mx-auto min-w-[210px]"
+                />
               </div>
             </FadeIn>
           </div>
           {/* text */}
           <FadeIn delay={0.4}>
-            <div className="bg-muted dark:bg-card mt-12 sm:mt-0 p-3 sm:p-4 lg:p-6 rounded-[12px] lg:rounded-[16px] max-w-full lg:max-w-[428px] content shrink-2">
+            <div className="bg-muted dark:bg-card mx-auto mt-12 sm:mt-0 p-3 sm:p-4 lg:p-6 rounded-[12px] lg:rounded-[16px] max-w-[650px] lg:max-w-[428px] h-full content">
               <p className="mb-16 sm:mb-20 lg:mb-20 font-normal text-[16px] leading-[22px] sm:leading-[24px]">
                 “We believe there&#39;s a perfect home for everybody, no matter
                 the budget. That&#39;s why we always find the best homes for
