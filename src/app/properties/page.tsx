@@ -91,7 +91,7 @@ const Properties = () => {
           {/* pagination & profile */}
           <div
             className={`
-          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-3 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[90vh] ${
+          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-1 md:gap-3 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[90vh] ${
             filter ? "" : "hidden md:flex"
           }
             `}
@@ -249,7 +249,7 @@ const Properties = () => {
           {/* properties */}
           {properties.map((property) => (
             <div
-              className="px-4 md:px-2 lg:px-12 xl:px-16 pt-6 md:pt-4 lg:pt-10 xl:pt-14 pb-8 border border-border rounded-[8px] lg:rounded-[12px]"
+              className="sm:px-4 md:px-2 lg:px-12 xl:px-16 pt-6 md:pt-4 lg:pt-10 xl:pt-14 pb-8 sm:border border-border rounded-[8px] lg:rounded-[12px]"
               key={property.id}
             >
               <div className="gap-6 grid grid-cols-1 md:grid-cols-2">

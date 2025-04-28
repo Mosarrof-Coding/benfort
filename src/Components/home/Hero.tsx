@@ -6,40 +6,43 @@ import dream1 from "@/../public/hero/dreem1.svg";
 import FadeIn from "../animation/FadIn";
 export const Hero = () => {
   return (
-    <div className="pt-12 sm:pt-14 md:pt-16 lg:pt-18 pb-13 sm:pb-15 md:pb-18 lg:pb-20">
-      <FadeIn delay={0.3} duration={1}>
-        <div className="mx-auto px-4 max-w-[1224px] myContizer">
-          <div className="pb-10 md:pb-14 lg:pb-22 text-center heading">
-            <h1 className="mx-auto mb-3 sm:mb-4 lg:mb-[26px] w-fit font-medium text-[34px] sm:text-[44px] md:text-[60px] lg:text-[81px] leading-[1] tracking-[-2px] lg:tracking-[-4px]">
-              <span className="md:px-4 lg:px-[28px]">
+    <section className="pt-12 sm:pt-14 md:pt-16 lg:pt-18 pb-13 sm:pb-15 md:pb-18 lg:pb-20">
+      <div className="mx-auto px-4 max-w-[1224px] myContizer">
+        <div className="pb-10 md:pb-14 lg:pb-22 text-center heading">
+          <FadeIn>
+            <h1 className="mx-auto mb-3 sm:mb-4 lg:mb-[26px] w-fit max-w-[320px] sm:max-w-fit font-medium text-[38px] sm:text-[44px] md:text-[60px] lg:text-[81px] leading-[1] tracking-[-2px] lg:tracking-[-4px]">
+              <Image
+                src={heroSvg}
+                alt="heroIcon"
+                className="sm:hidden mx-auto mb-3 max-w-[80px]"
+              />
+              <span className="">
                 Find the <br className="md:hidden" />{" "}
-                <span className="text-destructive"> perfect</span>
+                <span className="text-destructive">perfect </span>
               </span>
-              <span className="inline-block px-3 md:px-px md:pl-6">
+              <span className="hidden sm:inline-block px-3 md:px-px">
                 <Image
                   src={heroSvg}
                   alt="heroIcon"
-                  className="max-w-[46px] sm:max-w-[60px] md:max-w-[80px] lg:max-w-full"
+                  className="max-w-[52px] sm:max-w-[60px] md:max-w-[80px] lg:max-w-full"
                 />
               </span>
-              <br className="" />
-              <span
-                className="text-destructive
-"
-              >
-                property
-              </span>{" "}
-              with Benfort
+              <br className="hidden sm:block" />
+              <span className="text-destructive">property</span> with Benfort
             </h1>
+          </FadeIn>
+          <FadeIn delay={0.3}>
             <p className="font-normal text-[16px] leading-[22px] sm:leading-[24px]">
               We believe there&#39;s a perfect home for everybody, no matter the
               budget. <br className="hidden sm:block" /> That&#39;s why we
               always find the best homes for your budget.
             </p>
-          </div>
+          </FadeIn>
+        </div>
 
-          <div className="flex sm:flex-row flex-col gap-4 lg:gap-6 lg:pr-14 lg:pl-9 innerDiv">
-            {/* card img */}
+        <div className="flex sm:flex-row flex-col gap-4 lg:gap-6 lg:pr-14 lg:pl-9 innerDiv">
+          {/* card img */}
+          <FadeIn>
             <div className="left">
               <Image
                 src={heroImage}
@@ -47,14 +50,16 @@ export const Hero = () => {
                 className="min-w-[240px]"
               />
             </div>
-            {/* card */}
+          </FadeIn>
+          {/* card */}
+          <FadeIn delay={0.3}>
             <div className="block relative mt-8 sm:mt-0 rounded-xl lg:rounded-2xl sm:min-w-[340px] lg:min-w-[421px] min-h-[340px] sm:min-h-full overflow-hidden">
               {/* mask */}
               <div className="top-0 right-0 left-0 z-10 absolute bg-gradient-to-b from-card to-transparent h-[20%] touch-none pointer-events-none layer"></div>
               <div className="right-0 bottom-0 left-0 z-10 absolute bg-gradient-to-b from-transparent to-card h-[20%] touch-none pointer-events-none layer"></div>
               {/* TextBox */}
               <div
-                className="top-0 left-0 absolute flex flex-col justify-center items-center bg-card px-2 md:px-4 lg:px-8 py-2 rounded-xl lg:rounded-2xl min-w-[280px] sm:max-w-[421px] h-full overflow-y-auto"
+                className="top-0 left-0 absolute flex flex-col items-center bg-card px-2 md:px-4 lg:px-8 py-2 rounded-xl lg:rounded-2xl min-w-[280px] sm:max-w-[421px] h-full overflow-y-auto"
                 style={{
                   scrollbarWidth: "none",
                   msOverflowStyle: "none",
@@ -65,7 +70,7 @@ export const Hero = () => {
                   <div className="relative bg-transparent pb-2.5 border border-border rounded-md">
                     <div className="bg-background px-2 md:px-4 lg:px-6 pt-8 md:pt-10 lg:pt-12 rounded-md clientContainer">
                       <div className="flex items-center gap-4 mb-4 lg:mb-6 avater">
-                        <div className="bg-white/5 shadow-[0px_8px_12px_rgba(0,0,0,0.08)] border-[2px] border-border rounded-full w-fit">
+                        <div className="bg-white/5 shadow-[0px_8px_12px_rgba(0,0,0,0.08)] border-[2px] border-border rounded-full w-fit overflow-hidden">
                           <Image src={dream1} alt="dream1" />
                         </div>
                         <div className="img">
@@ -267,9 +272,9 @@ export const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
-      </FadeIn>
-    </div>
+      </div>
+    </section>
   );
 };

@@ -47,9 +47,9 @@ export const Agents = () => {
   // last delay
   const length = agentsData.length;
   const lastDelay = (length - 1) * 0.1;
-  const staticCardDelay = lastDelay + 0.1;
+  const staticCardDelay = lastDelay + 0.2;
   return (
-    <div className="py-16 sm:py-20 md:py-24 lg:py-30">
+    <section className="py-16 sm:py-20 md:py-24 lg:py-30">
       <div className="mx-auto px-4 max-w-[1232px]">
         <div className="text-center agentHeading">
           <FadeIn>
@@ -94,7 +94,7 @@ export const Agents = () => {
           {/* sign up */}
           <FadeIn delay={staticCardDelay}>
             <div
-              className="bg-card p-2 lg:p-4 rounded-[16px] h-full min-h-[280px]"
+              className="bg-card mx-auto p-2 lg:p-4 rounded-[16px] max-w-[380px] h-full min-h-[380px]"
               style={{
                 boxShadow:
                   "inset 0px -2px 2px rgba(255, 102, 37, 0.12), inset 0px 2px 2px #FFFFFF",
@@ -124,6 +124,6 @@ export const Agents = () => {
           </FadeIn>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

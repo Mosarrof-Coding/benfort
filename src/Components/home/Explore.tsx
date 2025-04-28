@@ -9,7 +9,7 @@ import Background from "@/../public/explore/Background.png";
 import FadeIn from "../animation/FadIn";
 export const Explore = () => {
   return (
-    <div className="py-16 sm:py-20 md:py-24 lg:py-30">
+    <section className="py-16 sm:py-20 md:py-24 lg:py-30">
       <div className="mx-auto px-4 max-w-[1232px] myContizer">
         <FadeIn>
           <h2 className="md:hidden block mb-4 font-medium text-[26px] sm:text-[32px] lg:text-[40px] text-center md:text-start leading-[40px] sm:leading-[46px] lg:leading-[48px] tracking-[-1px] sm:tracking-[-2px]">
@@ -114,6 +114,6 @@ export const Explore = () => {
           </FadeIn>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -7,7 +7,7 @@ import FadeIn from "../animation/FadIn";
 
 export const Perks = () => {
   return (
-    <div className="bg-card py-16 sm:py-20 md:py-24 lg:py-30">
+    <section className="bg-card py-16 sm:py-20 md:py-24 lg:py-30">
       <div className="mx-auto px-4 max-w-[1232px] myContizer">
         <div className="text-center perkHeading">
           <FadeIn>
@@ -94,6 +94,6 @@ export const Perks = () => {
           </FadeIn>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

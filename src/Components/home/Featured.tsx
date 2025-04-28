@@ -40,7 +40,7 @@ export const Featured = () => {
     },
   ];
   return (
-    <div className="bg-card py-16 sm:py-20 md:py-24 lg:py-30">
+    <section className="bg-card py-16 sm:py-20 md:py-24 lg:py-30">
       <div className="mx-auto px-4 max-w-[1232px] myContizer">
         <div className="text-center">
           <h2 className="mb-1 sm:mb-2 lg:mb-4 font-medium text-[26px] text-destructive sm:text-[32px] lg:text-[40px] leading-[44px] sm:leading-[46px] lg:leading-[48px] tracking-[-1px] sm:tracking-[-2px]">
@@ -82,6 +82,6 @@ export const Featured = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

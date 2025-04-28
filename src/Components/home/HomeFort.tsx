@@ -6,7 +6,7 @@ import FadeIn from "../animation/FadIn";
 
 export const HomeFort = () => {
   return (
-    <div className="py-12 sm:py-16 md:py-20 lg:py-30 bgimage">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-30 bgimage">
       <div className="mx-auto px-4 max-w-[1232px]">
         <div className="flex md:flex-row flex-col gap-6 md:gap-8 lg:gap-25 w-full homfortContainer">
           <div className="w-fit">
@@ -45,6 +45,6 @@ export const HomeFort = () => {
           </FadeIn>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

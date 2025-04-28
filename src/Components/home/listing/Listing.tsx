@@ -4,7 +4,7 @@ import FadeIn from "@/Components/animation/FadIn";
 
 export const Listing = () => {
   return (
-    <div className="py-16 sm:py-20 md:py-24 lg:py-30">
+    <section className="py-16 sm:py-20 md:py-24 lg:py-30">
       <div className="mx-auto px-4 max-w-[1232px] myContizer">
         <div className="text-center listHeading">
           <FadeIn>
@@ -22,6 +22,6 @@ export const Listing = () => {
           <Cards />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
