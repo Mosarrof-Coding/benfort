@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
-    apple: "/apple-touch-icon.png", // Optional if available
+    apple: "/apple-touch-icon.png",
   },
   keywords: [
     "real estate",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "benfort",
     images: [
       {
-        url: "/og-image.jpg", // Place in /public folder
+        url: "/public/favicon.svg",
         width: 1200,
         height: 630,
         alt: "benfort - Real Estate Solutions",
