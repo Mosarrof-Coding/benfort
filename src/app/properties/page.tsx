@@ -738,16 +738,16 @@ const Properties = () => {
                       Interior Details
                     </p>
                     <ul className="mt-4">
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Equipped Kitchen
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Gym
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Landry
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Media Room
                       </li>
                     </ul>
@@ -757,22 +757,22 @@ const Properties = () => {
                       Outdoor Details
                     </p>
                     <ul className="mt-4">
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Patio
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Outdoor Fireplace
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Gazebo
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Outdoor Dining Area
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Pergola
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Garden Pathways
                       </li>
                     </ul>
@@ -785,22 +785,22 @@ const Properties = () => {
                       Utilities
                     </p>
                     <ul className="mt-4">
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Central Air
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Electricity
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Heating
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Natural Gas
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Ventilation
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Water
                       </li>
                     </ul>
@@ -811,16 +811,16 @@ const Properties = () => {
                       Other Features
                     </p>
                     <ul className="mt-4">
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Fire Pit
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Vegetable Garden
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Treehouse
                       </li>
-                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
+                      <li className="before:top-1/2 before:left-0 before:absolute relative before:bg-foreground pl-4 sm:pl-6 before:rounded-full w-full before:w-1.5 before:h-1.5 text-[14px] before:content-[''] before:-translate-y-1/2">
                         Outdoor Shower
                       </li>
                     </ul>
@@ -847,16 +847,12 @@ const Properties = () => {
                         <p className={`${activePlane === 2 ? "" : "hidden"}`}>
                           Lorem ipsum, dolor sit amet consectetur adipisicing
                           elit. Quasi repellat repudiandae quod cupiditate. Vero
-                          quos, dicta accusamus laboriosam corrupti quod ipsam
-                          earum reprehenderit inventore natus aut corporis
+                          quos, dicta accusamus laboriosam natus aut corporis
                           ratione autem nesciunt nisi temporibus pariatur.
                           Veniam dolorem asperiores quo eum, consectetur illum
                           in sapiente molestiae quia repudiandae aspernatur hic
-                          error modi voluptate nam necessitatibus sint, fuga,
-                          ipsa nisi nobis illo vitae? Tenetur eligendi laborum
-                          molestiae molestias provident autem officiis sint,
-                          quis nostrum ex quibusdam rem sequi quo earum nisi!
-                          Deserunt, unde totam!
+                          error modi vsequi quo earum nisi! Deserunt, unde
+                          totam!
                         </p>
                         <p className={`${activePlane === 3 ? "" : "hidden"}`}>
                           Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -865,9 +861,9 @@ const Properties = () => {
                           architecto, enim soluta vitae sequi. Cumque tempora
                           libero corrupti aperiam fugit neque repellat amet
                           itaque, maiores, ipsa enim architecto reiciendis
-                          obcaecati quibusdam ipsam deleniti? Deserunt odio
-                          aperiam quae ipsa soluta aut minima! Maiores facilis
-                          distinctio libero quas dolorum.
+                          obcaecatiDeserunt odio aperiam quae ipsa soluta aut
+                          minima! Maiores facilis distinctio libero quas
+                          dolorum.
                         </p>
                       </div>
                       <div className="flex flex-wrap items-center gap-2 lg:gap-4 planning">

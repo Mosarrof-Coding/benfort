@@ -16,7 +16,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY >= 4);
+      setIsSticky(window.scrollY >= 1);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -45,7 +45,7 @@ const Navbar = () => {
     <header
       className={`z-50 bg-background/80 dark:bg-card backdrop-blur-lg w-full transition-all transform duration-500 ${
         isSticky
-          ? "fixed left-0 top-0 w-full shadow-lg py-1 md:py-2 lg:py-3 xl:py-4"
+          ? "sticky top-0 shadow-lg py-1 md:py-2 lg:py-3 xl:py-4"
           : "py-2 md:py-4 lg:py-6"
       }`}
     >
