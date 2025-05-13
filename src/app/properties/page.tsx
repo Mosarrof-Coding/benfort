@@ -547,7 +547,7 @@ const Properties = () => {
                     {/* address */}
                     <div className="mt-8 lg:mt-12 address">
                       <p className="mb-4 text-[12px]">ADDRESS</p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2">
+                      <div className="gap-6 lg:gap-8 grid grid-cols-2">
                         <div className="flex flex-col gap-5">
                           <div className="">
                             <p className="opacity-[0.4] mb-1 text-[12px]">
@@ -605,7 +605,7 @@ const Properties = () => {
                     {/* Details */}
                     <div className="mt-8 lg:mt-12 address">
                       <p className="mb-4 text-[12px]">DETAILS</p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2">
+                      <div className="gap-6 lg:gap-8 grid grid-cols-2">
                         <div className="flex flex-col gap-5">
                           <div className="">
                             <p className="opacity-[0.4] mb-1 text-[12px]">
@@ -732,7 +732,7 @@ const Properties = () => {
               {/* amenities & features */}
               <div className="mt-8 lg:mt-12 amenities">
                 <p className="mb-4 text-[12px]">AMENITIES & FEATURES</p>
-                <div className="gap-6 lg:gap-8 grid grid-cols-1 sm:grid-cols-2">
+                <div className="gap-6 lg:gap-8 grid grid-cols-2">
                   <div>
                     <p className="opacity-[0.4] pb-2 border-b border-border text-[12px]">
                       Interior Details
@@ -778,7 +778,7 @@ const Properties = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="gap-6 lg:gap-8 grid grid-cols-1 sm:grid-cols-2 mt-6 lg:mt-8">
+                <div className="gap-6 lg:gap-8 grid grid-cols-2 mt-6 lg:mt-8">
                   {/* Utilities */}
                   <div>
                     <p className="opacity-[0.4] pb-2 border-b border-border text-[12px]">
@@ -830,77 +830,82 @@ const Properties = () => {
               <div className="flex flex-col gap-10 lg:gap-14">
                 {/* flooer plans */}
                 <div className="items-center gap-4 lg:gap-6 grid grid-cols-1 md:grid-cols-2 mt-10 lg:mt-15 florplans">
-                  <div className="plan">
-                    <p className="text-[12px]">FLORE PLANS</p>
-                    <div className="py-3 lg:py-5 text-[14px]">
-                      <p className={`${activePlane === 1 ? "" : "hidden"}`}>
-                        Living Spaces are more easily interpreted. All-In-Ones
-                        color floor plan option clearly defines your listing’s
-                        living spaces, making them obvious and clearly visible
-                        to your potential buyers/clients. Add extra value to
-                        your services. Color floor-plans show that you care
-                        about selling your client’s listing; they add a premium,
-                        high value look to any listing and can be used in your
-                        brochures, email and websites.
-                      </p>
-                      <p className={`${activePlane === 2 ? "" : "hidden"}`}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Quasi repellat repudiandae quod cupiditate. Vero
-                        quos, dicta accusamus laboriosam corrupti quod ipsam
-                        earum reprehenderit inventore natus aut corporis ratione
-                        autem nesciunt nisi temporibus pariatur. Veniam dolorem
-                        asperiores quo eum, consectetur illum in sapiente
-                        molestiae quia repudiandae aspernatur hic error modi
-                        voluptate nam necessitatibus sint, fuga, ipsa nisi nobis
-                        illo vitae? Tenetur eligendi laborum molestiae molestias
-                        provident autem officiis sint, quis nostrum ex quibusdam
-                        rem sequi quo earum nisi! Deserunt, unde totam!
-                      </p>
-                      <p className={`${activePlane === 3 ? "" : "hidden"}`}>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Ratione at iste repudiandae a laborum inventore
-                        magni labore commodi sint nostrum vero quia architecto,
-                        enim soluta vitae sequi. Cumque tempora libero corrupti
-                        aperiam fugit neque repellat amet itaque, maiores, ipsa
-                        enim architecto reiciendis obcaecati quibusdam ipsam
-                        deleniti? Deserunt odio aperiam quae ipsa soluta aut
-                        minima! Maiores facilis distinctio libero quas dolorum.
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-2 lg:gap-4 planning">
-                      <button
-                        className={`cursor-pointer px-3 lg:px-4 py-1.5 lg:py-2 rounded-[6px] lg:rounded-[8px] text-[12px] ${
-                          activePlane === 1
-                            ? "bg-foreground text-background"
-                            : "bg-transparent border border-foreground text-foreground"
-                        }`}
-                        onClick={() => setActivePlane(1)}
-                      >
-                        Ground Floor Plane
-                      </button>
-                      <button
-                        className={`cursor-pointer px-3 lg:px-4 py-1.5 lg:py-2 rounded-[6px] lg:rounded-[8px] text-[12px] ${
-                          activePlane === 2
-                            ? "bg-foreground text-background"
-                            : "bg-transparent border border-foreground text-foreground"
-                        }`}
-                        onClick={() => setActivePlane(2)}
-                      >
-                        First Floor Plane
-                      </button>
-                      <button
-                        className={`cursor-pointer px-3 lg:px-4 py-1.5 lg:py-2 rounded-[6px] lg:rounded-[8px] text-[12px] ${
-                          activePlane === 3
-                            ? "bg-foreground text-background"
-                            : "bg-transparent border border-foreground text-foreground"
-                        }`}
-                        onClick={() => setActivePlane(3)}
-                      >
-                        Second Floor Plane
-                      </button>
+                  <div className="order-2 sm:order-1 plan">
+                    <p className="hidden sm:block text-[12px]">FLORE PLANS</p>
+                    <div className="flex sm:flex-col flex-col-reverse">
+                      <div className="py-3 lg:py-5 text-[14px]">
+                        <p className={`${activePlane === 1 ? "" : "hidden"}`}>
+                          Living Spaces are more easily interpreted. All-In-Ones
+                          color floor plan option clearly defines your listing’s
+                          living spaces, making them obvious and clearly visible
+                          to your potential buyers/clients. Add extra value to
+                          your services. Color floor-plans show that you care
+                          about selling your client’s listing; they add a
+                          premium, high value look to any listing and can be
+                          used in your brochures, email and websites.
+                        </p>
+                        <p className={`${activePlane === 2 ? "" : "hidden"}`}>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Quasi repellat repudiandae quod cupiditate. Vero
+                          quos, dicta accusamus laboriosam corrupti quod ipsam
+                          earum reprehenderit inventore natus aut corporis
+                          ratione autem nesciunt nisi temporibus pariatur.
+                          Veniam dolorem asperiores quo eum, consectetur illum
+                          in sapiente molestiae quia repudiandae aspernatur hic
+                          error modi voluptate nam necessitatibus sint, fuga,
+                          ipsa nisi nobis illo vitae? Tenetur eligendi laborum
+                          molestiae molestias provident autem officiis sint,
+                          quis nostrum ex quibusdam rem sequi quo earum nisi!
+                          Deserunt, unde totam!
+                        </p>
+                        <p className={`${activePlane === 3 ? "" : "hidden"}`}>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Ratione at iste repudiandae a laborum inventore
+                          magni labore commodi sint nostrum vero quia
+                          architecto, enim soluta vitae sequi. Cumque tempora
+                          libero corrupti aperiam fugit neque repellat amet
+                          itaque, maiores, ipsa enim architecto reiciendis
+                          obcaecati quibusdam ipsam deleniti? Deserunt odio
+                          aperiam quae ipsa soluta aut minima! Maiores facilis
+                          distinctio libero quas dolorum.
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap items-center gap-2 lg:gap-4 planning">
+                        <button
+                          className={`cursor-pointer px-3 lg:px-4 py-1.5 lg:py-2 rounded-[6px] lg:rounded-[8px] text-[12px] border border-foreground ${
+                            activePlane === 1
+                              ? "bg-foreground text-background"
+                              : "bg-transparent  text-foreground"
+                          }`}
+                          onClick={() => setActivePlane(1)}
+                        >
+                          Ground Flore
+                        </button>
+                        <button
+                          className={`cursor-pointer px-3 lg:px-4 py-1.5 lg:py-2 rounded-[6px] lg:rounded-[8px] text-[12px] border border-foreground ${
+                            activePlane === 2
+                              ? "bg-foreground text-background"
+                              : "bg-transparent  text-foreground"
+                          }`}
+                          onClick={() => setActivePlane(2)}
+                        >
+                          First Flore
+                        </button>
+                        <button
+                          className={`cursor-pointer px-3 lg:px-4 py-1.5 lg:py-2 rounded-[6px] lg:rounded-[8px] text-[12px] border border-foreground ${
+                            activePlane === 3
+                              ? "bg-foreground text-background"
+                              : "bg-transparent  text-foreground"
+                          }`}
+                          onClick={() => setActivePlane(3)}
+                        >
+                          Second Flore
+                        </button>
+                      </div>{" "}
                     </div>
                   </div>
-                  <div className="planDiagram">
+                  <div className="order-1 sm:order-2 planDiagram">
+                    <p className="sm:hidden mb-6 text-[12px]">FLORE PLANS</p>
                     <Image
                       src={florediagram}
                       alt="florediagram image"
@@ -940,11 +945,11 @@ const Properties = () => {
                     </video>
                     {!playing && (
                       <div
-                        className="z-10 absolute inset-0 place-items-center grid bg-[url('/property/videothumb.png')] bg-cover bg-center cursor-pointer"
+                        className="group z-10 absolute inset-0 place-items-center grid bg-[url('/property/videothumb.png')] bg-cover bg-center cursor-pointer"
                         onClick={handlePlay}
                       >
                         <svg
-                          className="group w-16 h-12"
+                          className="w-16 h-12"
                           viewBox="0 0 68 48"
                           version="1.1"
                         >

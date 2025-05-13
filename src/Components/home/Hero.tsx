@@ -16,11 +16,11 @@ export const Hero = () => {
                 alt="heroIcon"
                 className="sm:hidden mx-auto mb-3 max-w-[80px]"
               />
-              <span className="">
+              <span className="lg:pl-12">
                 Find the <br className="md:hidden" />{" "}
                 <span className="text-destructive">perfect </span>
               </span>
-              <span className="hidden sm:inline-block px-3 md:px-px">
+              <span className="hidden sm:inline-block lg:ml-6 px-3 md:px-px">
                 <Image
                   src={heroSvg}
                   alt="heroIcon"
