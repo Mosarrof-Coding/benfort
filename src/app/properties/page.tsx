@@ -1,69 +1,12 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import property1 from "@/../public/property/Property1.png";
-import property2 from "@/../public/property/Property2.png";
-import property3 from "@/../public/property/Property3.png";
-import property4 from "@/../public/property/Property4.png";
-import property5 from "@/../public/property/Property5.png";
-import agents from "@/../public/property/agentFml.png";
+
 import florediagram from "@/../public/property/florediagram.png";
 import { BedDouble, SquareChevronRight } from "lucide-react";
 import { useRef, useState } from "react";
 import { Cards } from "@/Components/home/listing/Cards";
-const properties = [
-  {
-    id: 1,
-    agent: "Jessy King",
-    image: property1,
-    thumbImage: [property2, property3, property4, property5],
-    agentImg: agents,
-    title: "Luxury Loft",
-    details: `Nestled in a charming suburban area, this stunning home rests on a spacious lot, offering...`,
-    description: `Nestled in a charming suburban area, this stunning home rests on a spacious lot, 
-offering picturesque views of the nearby rolling hills. Located in the tranquil heart of 
-Pleasantville, it features contemporary design elements that make it truly exceptional. 
-With expansive frontage on a peaceful cul-de-sac and all essential utilities in place, 
-this is the ideal setting for your dream family home.
-
-If serene living is what you're after, this property is a must-see! Located within the 
-200-acre Green Valley community, managed by Heritage Developments, this area is 
-renowned as the most family-friendly and well-planned suburb in Ohio. Green Valley's 
-standout features include its meticulous landscaping and thoughtfully designed 
-layout, evident throughout the entire community.`,
-    roomType: ["Apartment", "Sales", "Joursy City"],
-    locate: "Jersey City",
-    roomCount: "04",
-    bedCount: "1",
-    bathCount: "2",
-    squareFit: "600 ft",
-    price: 950000,
-    address: {
-      Address: "Hope Bvd, no 45",
-      city: "Jersey City",
-      zip: "111111",
-      area: "Greenville",
-      State: "New Jersey State",
-      country: "United States",
-    },
-    propertyDetails: {
-      PropertyId: 546679,
-      priceInfo: 2450,
-      lotSize: 1000,
-      bedRooms: 1,
-      garages: "NIL",
-      garageSize: 3,
-      structure: "Apartment",
-      price: 950000,
-      propertySize: 560,
-      rooms: 3,
-      bathrooms: 2,
-      year: 1988,
-      form: "2024 - 07 - 26",
-      floores: 1,
-    },
-  },
-];
+import { PropertyData } from "@/constants/PropertyData";
 
 const Properties = () => {
   const [activePlane, setActivePlane] = useState(1);
@@ -247,7 +190,7 @@ const Properties = () => {
             </Link>
           </div>
           {/* properties */}
-          {properties.map((property) => (
+          {PropertyData.slice(0, 1).map((property) => (
             <div
               className="sm:px-4 md:px-2 lg:px-12 xl:px-16 pt-6 md:pt-4 lg:pt-10 xl:pt-14 pb-8 sm:border border-border rounded-[8px] lg:rounded-[12px]"
               key={property.id}
