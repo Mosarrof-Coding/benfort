@@ -5,12 +5,15 @@ import Image from "next/image";
 import florediagram from "@/../public/property/florediagram.png";
 import { BedDouble, SquareChevronRight } from "lucide-react";
 import { useRef, useState } from "react";
-import { Cards } from "@/Components/home/listing/Cards";
 import { PropertyData } from "@/constants/PropertyData";
+import Category from "@/Components/home/category/Category";
 
 interface PropertyDetailsProps {
-  params: { id: string };
+  params: {
+    id: string;
+  };
 }
+
 const PropertyDetails = ({ params }: PropertyDetailsProps) => {
   const { id } = params;
 
@@ -25,7 +28,14 @@ const PropertyDetails = ({ params }: PropertyDetailsProps) => {
       setPlaying(true);
     }
   };
+
+  // find this items
   const property = PropertyData.find((item) => item.id === id);
+
+  // filter cateogory by title
+  const category = PropertyData.filter(
+    (sorted) => sorted.title === property?.title
+  );
 
   if (!property) {
     return (
@@ -203,8 +213,8 @@ const PropertyDetails = ({ params }: PropertyDetailsProps) => {
               </svg>
             </Link>
           </div>
-          {/* properties */}
 
+          {/* properties details*/}
           <div
             className="sm:px-4 md:px-2 lg:px-12 xl:px-16 pt-6 md:pt-4 lg:pt-10 xl:pt-14 pb-8 sm:border border-border rounded-[8px] lg:rounded-[12px]"
             key={property.id}
@@ -863,7 +873,7 @@ const PropertyDetails = ({ params }: PropertyDetailsProps) => {
                     alt="florediagram image"
                     placeholder="blur"
                     className={`grayscale-50 ${
-                      activePlane === 2 ? "" : "hidden"
+                      activePlane === 2 ? "opacity-50" : "hidden"
                     }`}
                   />
                   <Image
@@ -939,7 +949,7 @@ const PropertyDetails = ({ params }: PropertyDetailsProps) => {
               <div>
                 <p className="mb-4 text-[12px]">SIMILAR PROPERTIES</p>
                 <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                  <Cards />
+                  <Category category={category} />
                 </div>
               </div>
             </div>

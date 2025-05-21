@@ -1,20 +1,30 @@
-import Image from "next/image";
-import React from "react";
-
-import { BedDouble } from "lucide-react";
 import FadeIn from "@/Components/animation/FadIn";
+import { propertyItem } from "@/types/DataTypes";
+import { BedDouble } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { PropertyData } from "@/constants/PropertyData";
-export const Cards = () => {
+import React from "react";
+interface CategoryProps {
+  category: propertyItem[];
+}
+const Category: React.FC<CategoryProps> = ({ category }) => {
+  if (category.length === 0) {
+    return (
+      <div className="place-items-center grid p-4">
+        No matching properties found.
+      </div>
+    );
+  }
+
   return (
     <>
-      {PropertyData.map((card, i) => (
-        <FadeIn key={card.id} delay={i * 0.2}>
+      {category.map((item, i) => (
+        <FadeIn key={item.id} delay={i * 0.2}>
           <div className="mx-auto pb-4 lg:pb-6 w-full perkCard">
             <div className="relative w-full">
-              <Link href={`/property/${card.id}`}>
+              <Link href={`/property/${item.id}`}>
                 <Image
-                  src={card.image}
+                  src={item.image}
                   alt="propertyImg1 image"
                   placeholder="blur"
                   className="w-full cursor-pointer"
@@ -24,10 +34,10 @@ export const Cards = () => {
                 <div className="flex justify-between items-end gap-4 w-full">
                   <div className="flex gap-1 lg:gap-2">
                     <span className="bg-popover px-2 lg:px-3 py-1 lg:py-1.5 rounded-[6px] font-normal text-[12px] text-foreground leading-[18px]">
-                      {card.roomType[0]}
+                      {item.roomType[0]}
                     </span>
                     <span className="bg-popover px-2 lg:px-3 py-1 lg:py-1.5 rounded-[6px] font-normal text-[12px] text-foreground leading-[18px]">
-                      {card.roomType[1]}
+                      {item.roomType[1]}
                     </span>
                   </div>
                   <span className="bg-popover p-1 lg:p-1.5">
@@ -61,7 +71,7 @@ export const Cards = () => {
 
             <div className="mt-3 lg:mt-4">
               <h5 className="mb-2 font-normal text-[18px] leading-[25px] sm:leading-[27px]">
-                {card.title}
+                {item.title}
               </h5>
 
               <ul className="flex flex-wrap items-center gap-2">
@@ -86,7 +96,7 @@ export const Cards = () => {
                   </svg>
 
                   <p className="text-[12px] leading-[16px] sm:leading-[18px]">
-                    {card.locate}
+                    {item.locate}
                   </p>
                 </li>
                 <li className="flex items-center gap-1">
@@ -130,13 +140,13 @@ export const Cards = () => {
                     </defs>
                   </svg>
                   <p className="text-[12px] leading-[16px] sm:leading-[18px]">
-                    {card.roomCount}
+                    {item.roomCount}
                   </p>
                 </li>
               </ul>
 
               <p className="my-2 sm:my-3 font-normal text-[12px] break-words leading-[18px] whitespace-normal">
-                {card.details}
+                {item.details}
               </p>
 
               <ul className="flex flex-wrap items-center gap-2 lg:gap-3 mb-2 sm:mb-3">
@@ -148,7 +158,7 @@ export const Cards = () => {
                     className="text-foreground"
                   />
                   <p className="font-normal text-[12px] leading-[18px]">
-                    {card.bedCount} Room
+                    {item.bedCount} Room
                   </p>
                 </li>
                 <li className="flex items-center gap-1">
@@ -197,7 +207,7 @@ export const Cards = () => {
                   </svg>
 
                   <p className="font-normal text-[12px] leading-[18px]">
-                    {card.bathCount} Bath Room
+                    {item.bathCount} Bath Room
                   </p>
                 </li>
                 <li className="flex items-center gap-1">
@@ -248,13 +258,13 @@ export const Cards = () => {
                   </svg>
 
                   <p className="font-normal text-[12px] leading-[18px]">
-                    {card.squareFit}
+                    {item.squareFit}
                   </p>
                 </li>
               </ul>
 
               <h6 className="font-semibold text-[14px] leading-[21px]">
-                $ {card.price}
+                $ {item.price}
               </h6>
             </div>
           </div>
@@ -263,3 +273,5 @@ export const Cards = () => {
     </>
   );
 };
+
+export default Category;

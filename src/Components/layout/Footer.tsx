@@ -114,13 +114,13 @@ const Footer = () => {
                   CATEGORIES
                 </h6>
                 <Link
-                  href="/"
+                  href="/latest-properties"
                   className="w-fit font-normal text-[14px] text-white/50 hover:text-destructive"
                 >
                   Latest Properties
                 </Link>
                 <Link
-                  href="/"
+                  href="/featuerd-property"
                   className="w-fit font-normal text-[14px] text-white/50 hover:text-destructive"
                 >
                   Featured Properties
@@ -139,7 +139,7 @@ const Footer = () => {
                   MORE
                 </h6>
                 <Link
-                  href="/search"
+                  href="/properties"
                   className="w-fit font-normal text-[14px] text-white/50 hover:text-destructive"
                 >
                   Search Properties
@@ -193,7 +193,7 @@ const Footer = () => {
             <div className="flex gap-3 lg:gap-4">
               <FadeIn>
                 <Link
-                  href=""
+                  href="/policy"
                   className="font-light hover:text-destructive text-sm transition-all"
                 >
                   Privacy Policy
@@ -201,7 +201,7 @@ const Footer = () => {
               </FadeIn>
               <FadeIn>
                 <Link
-                  href=""
+                  href="/conditions"
                   className="font-light hover:text-destructive text-sm transition-all"
                 >
                   Terms of Service

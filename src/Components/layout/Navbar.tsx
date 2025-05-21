@@ -25,16 +25,16 @@ const Navbar = () => {
 
   const navLink = [
     {
-      name: "Properties",
+      name: "Property",
       href: "/properties",
-    },
-    {
-      name: "Search",
-      href: "/search",
     },
     {
       name: "Agent",
       href: "/agent",
+    },
+    {
+      name: "About Us",
+      href: "/about-us",
     },
   ];
 
