@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "benfort Real Estate",
     description:
       "Explore the latest property listings, homes, and real estate trends on benfort.",
-    url: "mcoding-benfort.vercel.app",
+    url: "https://mcoding-benfort.vercel.app",
     siteName: "benfort",
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
     creator: "@benfortOfficial", // Optional
   },
-  metadataBase: new URL("mcoding-benfort.vercel.app"),
+  metadataBase: new URL("https://mcoding-benfort.vercel.app"),
 };
 
 export default function RootLayout({
