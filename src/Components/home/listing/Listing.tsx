@@ -11,8 +11,6 @@ export const Listing = () => {
             <h2 className="mb-1 sm:mb-2 lg:mb-4 font-medium text-[26px] text-destructive sm:text-[32px] lg:text-[40px] leading-[44px] sm:leading-[46px] lg:leading-[48px] tracking-[-1px] sm:tracking-[-2px]">
               <span>New Listing</span>
             </h2>
-          </FadeIn>
-          <FadeIn delay={0.3}>
             <p className="font-normal text-[16px] leading-[22px] sm:leading-[24px]">
               Explore latest & featured properties for sale.
             </p>
