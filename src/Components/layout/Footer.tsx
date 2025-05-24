@@ -145,7 +145,7 @@ const Footer = () => {
                   Search Properties
                 </Link>
                 <Link
-                  href="/"
+                  href="/all-property"
                   className="w-fit font-normal text-[14px] text-white/50 hover:text-destructive"
                 >
                   All Listing
