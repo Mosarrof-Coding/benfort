@@ -46,7 +46,7 @@ export const Agents = () => {
   ];
   // last delay
   const length = agentsData.length;
-  const lastDelay = (length - 1) * 0.1;
+  const lastDelay = (length - 1) * 0.2;
   const staticCardDelay = lastDelay + 0.2;
   return (
     <section className="py-16 sm:py-20 md:py-24 lg:py-30">
@@ -62,8 +62,6 @@ export const Agents = () => {
                 Agents
               </span>
             </h2>
-          </FadeIn>
-          <FadeIn delay={0.3}>
             <p className="font-normal text-[16px] leading-[22px] sm:leading-[24px]">
               Explore easier ways to search for properties.
             </p>

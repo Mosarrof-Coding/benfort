@@ -30,8 +30,7 @@ export const Hero = () => {
               <br className="hidden sm:block" />
               <span className="text-destructive">property</span> with Benfort
             </h1>
-          </FadeIn>
-          <FadeIn delay={0.3}>
+
             <p className="font-normal text-[16px] leading-[22px] sm:leading-[24px]">
               We believe there&#39;s a perfect home for everybody, no matter the
               budget. <br className="hidden sm:block" /> That&#39;s why we
@@ -42,7 +41,7 @@ export const Hero = () => {
 
         <div className="flex sm:flex-row flex-col gap-4 lg:gap-6 lg:pr-14 lg:pl-9 innerDiv">
           {/* card img */}
-          <FadeIn>
+          <FadeIn delay={0.3}>
             <div className="left">
               <Image
                 src={heroImage}
@@ -52,7 +51,7 @@ export const Hero = () => {
             </div>
           </FadeIn>
           {/* card */}
-          <FadeIn delay={0.3}>
+          <FadeIn delay={0.4}>
             <div className="block relative mt-8 sm:mt-0 rounded-xl lg:rounded-2xl sm:min-w-[340px] lg:min-w-[421px] min-h-[340px] sm:min-h-full overflow-hidden">
               {/* mask */}
               <div className="top-0 right-0 left-0 z-10 absolute bg-gradient-to-b from-card to-transparent h-[20%] touch-none pointer-events-none layer"></div>

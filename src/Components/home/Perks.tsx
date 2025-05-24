@@ -20,8 +20,6 @@ export const Perks = () => {
                 Benfort
               </span>
             </h2>
-          </FadeIn>
-          <FadeIn delay={0.3}>
             <p className="font-normal text-[16px] leading-[22px] sm:leading-[24px]">
               Your trusted real estate partner in every transaction.
             </p>
@@ -29,7 +27,7 @@ export const Perks = () => {
         </div>
 
         <div className="flex sm:flex-row flex-col justify-between gap-6 mt-12 sm:mt-17 lg:mt-20 xl:mt-28 cardContainer">
-          <FadeIn>
+          <FadeIn delay={0.3}>
             <div className="mx-auto w-fit perkCard">
               <div className="shadow-[0px_2.35217px_3.01631px_rgba(222,110,33,0.06),0px_5.65259px_7.24861px_rgba(222,110,33,0.043),0px_10.6433px_13.6485px_rgba(222,110,33,0.035),0px_18.9859px_24.3466px_rgba(222,110,33,0.03),0px_35.511px_45.5376px_rgba(222,110,33,0.024),0px_85px_109px_rgba(222,110,33,0.016),inset_0px_-4px_36px_rgba(255,102,37,0.5)] mx-auto mb-4 sm:mb-5 lg:mb-6 rounded-full w-fit imgShaddow">
                 <Image
@@ -50,7 +48,7 @@ export const Perks = () => {
               </div>
             </div>
           </FadeIn>
-          <FadeIn delay={0.3}>
+          <FadeIn delay={0.4}>
             <div className="mx-auto w-fit perkCard">
               <div className="bg-white/5 shadow-[0px_2.35217px_3.01631px_rgba(222,110,33,0.06),0px_5.65259px_7.24861px_rgba(222,110,33,0.043),0px_10.6433px_13.6485px_rgba(222,110,33,0.035),0px_18.9859px_24.3466px_rgba(222,110,33,0.03),0px_35.511px_45.5376px_rgba(222,110,33,0.024),0px_85px_109px_rgba(222,110,33,0.016),inset_0px_-4px_36px_rgba(255,102,37,0.5)] mx-auto mb-4 sm:mb-5 lg:mb-6 rounded-full w-fit imgShaddow">
                 <Image
@@ -71,7 +69,7 @@ export const Perks = () => {
               </div>
             </div>
           </FadeIn>
-          <FadeIn delay={0.4}>
+          <FadeIn delay={0.5}>
             <div className="mx-auto w-fit perkCard">
               <div className="shadow-[0px_2.35217px_3.01631px_rgba(222,110,33,0.06),0px_5.65259px_7.24861px_rgba(222,110,33,0.043),0px_10.6433px_13.6485px_rgba(222,110,33,0.035),0px_18.9859px_24.3466px_rgba(222,110,33,0.03),0px_35.511px_45.5376px_rgba(222,110,33,0.024),0px_85px_109px_rgba(222,110,33,0.016),inset_0px_-4px_36px_rgba(255,102,37,0.5)] mx-auto mb-4 sm:mb-5 lg:mb-6 rounded-full w-fit imgShaddow">
                 <Image

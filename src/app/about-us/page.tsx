@@ -8,9 +8,7 @@ const AboutUs = () => {
         <div className="items-center gap-12 grid md:grid-cols-2">
           {/* Text Content */}
           <div>
-            <h2 className="mb-6 font-bold text-gray-800 text-4xl">
-              About Benfort
-            </h2>
+            <h2 className="mb-6 font-medium text-4xl">About Benfort</h2>
             <p className="opacity-80 mb-4 text-lg">
               At <strong>Benfort Real Estate</strong>, we don’t just sell
               properties — we craft journeys toward inspired living. From modern

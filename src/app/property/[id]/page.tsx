@@ -1,21 +1,19 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import React, { use, useRef, useState } from "react";
 
 import florediagram from "@/../public/property/florediagram.png";
 import { BedDouble, SquareChevronRight } from "lucide-react";
-import { useRef, useState } from "react";
 import { PropertyData } from "@/constants/PropertyData";
 import Category from "@/Components/home/category/Category";
 
 interface PropertyDetailsProps {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }
 
 const PropertyDetails = ({ params }: PropertyDetailsProps) => {
-  const { id } = params;
+  const { id } = use(params);
 
   const [activePlane, setActivePlane] = useState(1);
   const [filter, setFilter] = useState(false);
@@ -29,7 +27,7 @@ const PropertyDetails = ({ params }: PropertyDetailsProps) => {
     }
   };
 
-  // find this items
+  // find it's items to details
   const property = PropertyData.find((item) => item.id === id);
 
   // filter cateogory by title
@@ -39,7 +37,7 @@ const PropertyDetails = ({ params }: PropertyDetailsProps) => {
 
   if (!property) {
     return (
-      <section>
+      <section className="mx-4 py-16 text-destructive text-center">
         <h1>Property Not Found</h1>
         <p>No property matches the provided ID.</p>
       </section>
