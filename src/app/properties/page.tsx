@@ -465,7 +465,7 @@ const Properties = () => {
               {/* mibileFilterAdd */}
               <div className="flex items-center gap-2 sm:gap-0 mibileFilterAdd">
                 <form className="flex items-center sm:mx-2 lg:mx-4 my-4 border border-border rounded-lg w-full overflow-hidden">
-                  <div className="flex items-center">
+                  <div className="flex items-center w-full">
                     <svg
                       className="m-2 md:m-3 w-6"
                       viewBox="0 0 24 24"

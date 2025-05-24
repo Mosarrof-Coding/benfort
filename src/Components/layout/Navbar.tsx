@@ -29,6 +29,10 @@ const Navbar = () => {
       href: "/properties",
     },
     {
+      name: "Services",
+      href: "/services",
+    },
+    {
       name: "Agent",
       href: "/agent",
     },

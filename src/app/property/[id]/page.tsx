@@ -241,15 +241,14 @@ const PropertyDetails = ({ params }: PropertyDetailsProps) => {
               <div className="details">
                 <div className="flex flex-wrap justify-between items-center gap-4 w-full">
                   <div className="flex gap-1 lg:gap-2">
-                    <span className="bg-popover px-2 lg:px-3 py-1 lg:py-1.5 rounded-[6px] font-normal text-[12px] text-foreground leading-[18px]">
-                      {property.roomType[0]}
-                    </span>
-                    <span className="bg-popover px-2 lg:px-3 py-1 lg:py-1.5 rounded-[6px] font-normal text-[12px] text-foreground leading-[18px]">
-                      {property.roomType[1]}
-                    </span>
-                    <span className="bg-popover px-2 lg:px-3 py-1 lg:py-1.5 rounded-[6px] font-normal text-[12px] text-foreground leading-[18px]">
-                      {property.roomType[2]}
-                    </span>
+                    {property.roomType.map((typy, i) => (
+                      <div
+                        key={i}
+                        className="bg-popover px-2 lg:px-3 py-1 lg:py-1.5 rounded-[6px] font-normal text-[12px] text-foreground leading-[18px]"
+                      >
+                        {typy}
+                      </div>
+                    ))}
                   </div>
                   <span className="bg-popover p-1 lg:p-1.5">
                     <svg
