@@ -972,10 +972,13 @@ const PropertyDetails = ({ params }: PropertyDetailsProps) => {
               </svg>
             </button>
             <div className="flex items-center gap-4 ms-auto mt-4 w-fit">
-              <Link href="" className="hover:text-destructive text-sm">
+              <Link href="/policy" className="hover:text-destructive text-sm">
                 Privacy Policy
               </Link>
-              <Link href="" className="hover:text-destructive text-sm">
+              <Link
+                href="/conditions"
+                className="hover:text-destructive text-sm"
+              >
                 Terms of Service
               </Link>
             </div>

@@ -5,9 +5,17 @@ import { Switch } from "@/Components/ui/switch";
 import { Cards } from "@/Components/home/listing/Cards";
 import { SquareChevronRight } from "lucide-react";
 
+// rc-slider
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
+
 const Properties = () => {
   const [filter, setFilter] = useState(false);
   const [pagin, setPagin] = useState(false);
+
+  // rc-slider
+  const [range, setRange] = useState<[number, number]>([0, 1000]);
+
   return (
     <section className="">
       <div className="mx-auto px-4 w-fit lg:max-w-[1464px]">
@@ -442,13 +450,22 @@ const Properties = () => {
                   {/* price range */}
                   <div className="">
                     <p className="text-[12px] whitespace-nowrap">Price</p>
-                    <div className="mt-2 lg:mt-3">
-                      <input
-                        type="range"
-                        min={10}
+
+                    <div className="px-4 py-8 w-full">
+                      <Slider
+                        range
+                        min={0}
                         max={1000}
-                        className="w-full"
+                        step={0}
+                        value={range}
+                        onChange={(value) =>
+                          setRange(value as [number, number])
+                        }
                       />
+                      <div className="flex justify-between mt-2 text-sm">
+                        <span>Min: {range[0]}</span>
+                        <span>Max: {range[1]}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
