@@ -475,7 +475,7 @@ const Properties = () => {
                 </div>
                 {/* reset button */}
                 <div className="hover:opacity-80 p-[18px_20px_20px_20px] lg:p-[22px_20px_24px_24px] border-t border-border">
-                  <button className="py-2 lg:py-3 border border-border rounded-[8px] w-full font-normal text-base cursor-pointer">
+                  <button className="py-2 lg:py-3 border hover:border-destructive border-border rounded-[8px] w-full font-normal hover:text-destructive text-base cursor-pointer">
                     Reset Search
                   </button>
                 </div>

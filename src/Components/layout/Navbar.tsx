@@ -132,7 +132,7 @@ const Navbar = () => {
 
             {/* mobile-menu */}
             <div
-              className={`top-full z-10 right-0 overflow-hidden absolute h-screen bg-card/95 backdrop-blur-lg
+              className={`top-full z-10 right-0 overflow-hidden absolute h-screen bg-card 
                 ${menu ? "w-full duration-300" : "w-0 duration-300"}`}
             >
               <div className="w-full">
