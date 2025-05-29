@@ -75,7 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lexend.className} ${bricolage.variable} antialiased flex flex-col min-h-screen`}
+        className={`${lexend.className} ${bricolage.variable} antialiased flex flex-col min-h-screen overflow-x-hidden`}
       >
         <ThemeProvider
           attribute="class"

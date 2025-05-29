@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, Moon, RotateCcw, Sun } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -47,13 +47,13 @@ const Navbar = () => {
 
   return (
     <header
-      className={`z-50 bg-background/80 dark:bg-card backdrop-blur-lg w-full transition-all transform duration-500 ${
+      className={`z-50 bg-background/80 dark:bg-card backdrop-blur-lg w-full transition-all transform duration-500 relative  ${
         isSticky
-          ? "sticky top-0 shadow-lg py-1 md:py-2 lg:py-3 xl:py-4"
-          : "py-2 md:py-4 lg:py-6"
+          ? "sticky top-0 shadow-lg py-1 md:py-2 lg:py-2 xl:py-3"
+          : "py-2 md:py-3 lg:py-4 xl:py-6"
       }`}
     >
-      <div className={`mx-auto px-4 max-w-[1232px] transition`}>
+      <div className="mx-auto px-4 max-w-[1232px] transition">
         <nav className="flex flex-wrap justify-between items-center w-full">
           {/* logo */}
           <Link href="/" className="logo">
@@ -96,14 +96,13 @@ const Navbar = () => {
               Sign Up
             </Link>
             <Link
-              href=""
+              href="/login"
               className="hover:opacity-80 border-foreground transition-all btn-dark"
             >
               Login
             </Link>
           </div>
-
-          {/* mobile-menu */}
+          {/* mobile toggler/button */}
           <div className="md:hidden">
             <div className="flex items-center gap-4 w-fit h-fit">
               {mounted && (
@@ -121,50 +120,26 @@ const Navbar = () => {
               <span className="mb-1 text-border text-xl">|</span>
               <Menu
                 onClick={() => setMenu(!menu)}
-                className="active:opacity-50 cursor-pointer"
+                className={`active:opacity-50 cursor-pointer ${
+                  menu ? "text-destructive" : ""
+                }`}
               />
             </div>
-            {menu && (
-              <div className="top-0 right-0 left-0 z-10 fixed bg-background w-full h-screen transition-colors">
-                <div className="flex items-center bg-card py-2 sm:py-2 border-b border-border">
-                  {/* logo */}
-                  <Link
-                    href="/"
-                    className="lg:ml-24 px-4 w-1/2 font-medium sm:text-[28px] lg:text-[32px] text-2xl"
-                    onClick={() => setMenu(false)}
-                  >
-                    <h4 className="font-medium sm:text-[28px] lg:text-[32px] text-2xl cursor-pointer">
-                      benfort
-                    </h4>
-                  </Link>
-                  <div className="flex justify-end items-center gap-4 pr-4 w-1/2 h-full">
-                    {/* Theme toggle inside mobile menu */}
-                    {mounted && (
-                      <button
-                        onClick={() =>
-                          setTheme(theme === "dark" ? "light" : "dark")
-                        }
-                        className="place-items-center grid active:shadow-[0_1px_8px_0.5px] drop-shadow-2xl active:drop-shadow-foreground border-2 active:border-foreground border-border rounded-full w-7 h-7 transition cursor-pointer"
-                      >
-                        {theme === "dark" ? (
-                          <Sun className="w-4 lg:w-5 h-4 lg:h-5 text-foreground" />
-                        ) : (
-                          <Moon className="w-4 lg:w-5 h-4 lg:h-5" />
-                        )}
-                      </button>
-                    )}
-                    <span className="mb-1 text-border text-xl">|</span>
-                    <button
-                      onClick={() => setMenu(false)}
-                      className="font-medium sm:text-[28px] lg:text-[32px] text-2xl cursor-pointer"
-                    >
-                      <RotateCcw className="active:-rotate-180 transition duration-500" />
-                    </button>
-                  </div>
-                </div>
-                {/* navlink */}
 
-                <div className="flex flex-col gap-2 py-8">
+            {/* mobile-menu */}
+            <div
+              className={`top-[calc(100%+0px)] z-10 absolute w-full flex
+                ${menu ? "right-0 duration-300" : "-right-full duration-300"}
+              `}
+            >
+              {/* layer closing */}
+              <div
+                className="backdrop-blur-lg bg-border w-full min-h-full"
+                onClick={() => setMenu(!menu)}
+              ></div>
+              <div className="bg-background ms-auto border-gray-600 border-l-4 w-sm h-screen">
+                {/* navlink */}
+                <div className="flex flex-col gap-2 p-6">
                   {navLink.map((item, i) => (
                     <Link
                       key={i}
@@ -176,8 +151,8 @@ const Navbar = () => {
                     </Link>
                   ))}
                 </div>
-
-                <div className="flex flex-col gap-2 pt-8 border-t border-border">
+                {/* auth/login */}
+                <div className="flex flex-col gap-2 p-6 border-t border-border">
                   <Link
                     href=""
                     onClick={() => setMenu(false)}
@@ -186,7 +161,7 @@ const Navbar = () => {
                     Sign Up
                   </Link>
                   <Link
-                    href=""
+                    href="/login"
                     onClick={() => setMenu(false)}
                     className="p-[8px_12px_10px_12px] px-4 py-2 w-fit font-normal text-[14px] md:text-[16px] leading-[20px] md:leading-[22px]"
                   >
@@ -194,7 +169,7 @@ const Navbar = () => {
                   </Link>
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </nav>
       </div>

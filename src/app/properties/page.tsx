@@ -29,8 +29,10 @@ const Properties = () => {
           {/* pagination & profile */}
           <div
             className={`
-          top-12 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[86vh] ${
-            pagin ? "" : "hidden md:flex"
+          top-18 sm:top-14 md:top-16 lg:top-20 sticky flex flex-col justify-center items-center gap-1 md:gap-2 lg:gap-4 p-1 md:p-2 lg:p-3 xl:p-5 border border-border rounded-[8px] lg:rounded-[12px] w-fit max-h-[84dvh] ${
+            pagin
+              ? "transition-all duration-300"
+              : "hidden md:flex transition-all duration-300"
           }
             `}
           >
@@ -188,8 +190,10 @@ const Properties = () => {
           <div className="relative flex gap-2 overflow-hidden gallery">
             {/* filter */}
             <div
-              className={`top-0 z-20 lg:static absolute bg-background/90 backdrop-blur-lg shadow-lg lg:shadow-none shadow-border border border-border rounded-[8px] lg:rounded-[12px] lg:max-w-[371px] shrink-0 transition duration-1000 ${
-                filter ? "left-0" : "-left-full lg:block"
+              className={`top-4 sm:top-0 z-20 lg:static absolute bg-background/90 backdrop-blur-lg shadow-lg lg:shadow-none shadow-border border border-border rounded-[8px] lg:rounded-[12px] lg:max-w-[371px] shrink-0 transition duration-1000 ${
+                filter
+                  ? "left-0 transition-all duration-300"
+                  : "-left-full lg:block transition-all duration-300"
               }`}
             >
               <div className="relative">

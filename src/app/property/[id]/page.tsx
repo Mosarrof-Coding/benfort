@@ -225,9 +225,9 @@ const PropertyDetails = ({ params }: PropertyDetailsProps) => {
                   alt="property1 image"
                   className="mx-auto rounded-[8px] lg:rounded-[12px] w-full"
                 />
-                <div className="gap-2 grid grid-cols-1 sm:grid-cols-2">
+                <div className="flex gap-2 sm:grid grid-cols-1 sm:grid-cols-2 overflow-x-auto">
                   {property.thumbImage.map((thumb, i) => (
-                    <div key={i}>
+                    <div key={i} className="min-w-[180px] sm:min-w-full">
                       <Image
                         src={thumb}
                         alt="property2 image"
