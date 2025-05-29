@@ -128,8 +128,8 @@ const Navbar = () => {
 
             {/* mobile-menu */}
             <div
-              className={`top-[calc(100%+0px)] z-10 absolute w-full flex
-                ${menu ? "right-0 duration-300" : "-right-full duration-300"}
+              className={`top-[calc(100%+0px)] z-10 right-0 overflow-hidden absolute flex
+                ${menu ? "w-full duration-300" : "w-0 duration-300"}
               `}
             >
               {/* layer closing */}
