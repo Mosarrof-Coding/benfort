@@ -92,7 +92,10 @@ const Navbar = () => {
                 )}
               </button>
             )}
-            <Link href="" className="hover:opacity-80 transition-all btn-light">
+            <Link
+              href="signup"
+              className="hover:opacity-80 transition-all btn-light"
+            >
               Sign Up
             </Link>
             <Link
@@ -102,8 +105,9 @@ const Navbar = () => {
               Login
             </Link>
           </div>
-          {/* mobile toggler/button */}
+
           <div className="md:hidden">
+            {/* mobile toggler/button */}
             <div className="flex items-center gap-4 w-fit h-fit">
               {mounted && (
                 <button
@@ -128,23 +132,17 @@ const Navbar = () => {
 
             {/* mobile-menu */}
             <div
-              className={`top-[calc(100%+0px)] z-10 right-0 overflow-hidden absolute flex
-                ${menu ? "w-full duration-300" : "w-0 duration-300"}
-              `}
+              className={`top-full z-10 right-0 overflow-hidden absolute h-screen bg-card/95 backdrop-blur-lg
+                ${menu ? "w-full duration-300" : "w-0 duration-300"}`}
             >
-              {/* layer closing */}
-              <div
-                className="backdrop-blur-lg bg-border w-full min-h-full"
-                onClick={() => setMenu(!menu)}
-              ></div>
-              <div className="bg-background ms-auto border-gray-600 border-l-4 w-sm h-screen">
+              <div className="w-full">
                 {/* navlink */}
-                <div className="flex flex-col gap-2 p-6">
+                <div className="flex flex-col gap-2 p-5">
                   {navLink.map((item, i) => (
                     <Link
                       key={i}
                       href={item.href}
-                      className="px-4 py-1 w-fit font-normal text-[14px] md:text-[16px] leading-[22px] lg:leading-[24px] hover:tracking-[2px] transition-all"
+                      className="px-4 py-1 w-fit font-normal text-[14px] md:text-[16px] hover:text-destructive text-nowrap leading-[22px] lg:leading-[24px]"
                       onClick={() => setMenu(false)}
                     >
                       {item.name}
@@ -152,23 +150,28 @@ const Navbar = () => {
                   ))}
                 </div>
                 {/* auth/login */}
-                <div className="flex flex-col gap-2 p-6 border-t border-border">
+                <div className="flex flex-col gap-2 p-5 border-t border-border">
                   <Link
-                    href=""
+                    href="/signup"
                     onClick={() => setMenu(false)}
-                    className="p-[8px_12px_10px_12px] px-4 py-2 w-fit font-normal text-[14px] md:text-[16px] leading-[22px] md:leading-[24px]"
+                    className="p-[8px_12px_10px_12px] px-4 py-2 w-fit font-normal text-[14px] md:text-[16px] text-nowrap leading-[20px] md:leading-[22px]"
                   >
-                    Sign Up
+                    Sign up
                   </Link>
                   <Link
                     href="/login"
                     onClick={() => setMenu(false)}
-                    className="p-[8px_12px_10px_12px] px-4 py-2 w-fit font-normal text-[14px] md:text-[16px] leading-[20px] md:leading-[22px]"
+                    className="p-[8px_12px_10px_12px] px-4 py-2 w-fit font-normal text-[14px] text-destructive md:text-[16px] leading-[20px] md:leading-[22px]"
                   >
                     Login
                   </Link>
                 </div>
               </div>
+              {/* layer closing */}
+              <div
+                className="w-full h-full"
+                onClick={() => setMenu(!menu)}
+              ></div>
             </div>
           </div>
         </nav>
