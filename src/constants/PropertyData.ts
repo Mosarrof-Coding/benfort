@@ -10,6 +10,7 @@ import propertyImg4 from "@/../public/card/propertyImg4.png";
 import propertyImg5 from "@/../public/card/propertyImg5.png";
 import propertyImg6 from "@/../public/card/propertyImg6.png";
 import agents from "@/../public/property/agentFml.png";
+
 import { propertyItem } from "@/types/DataTypes";
 
 export const PropertyData: propertyItem[] = [
