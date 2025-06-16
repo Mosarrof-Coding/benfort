@@ -17,40 +17,51 @@ const bricolage = localFont({
 // seo part
 export const metadata: Metadata = {
   title: {
-    default: "benfort",
-    template: "%s | benfort",
+    default: "Benfort",
+    template: "%s | Benfort",
   },
   description:
-    "benfort — A premium real estate platform helping you find, buy, and sell properties with confidence.",
+    "Benfort — A premium real estate platform to discover, buy, and sell luxury homes, apartments, and properties confidently.",
+  keywords: [
+    "real estate",
+    "Benfort",
+    "property listings",
+    "luxury real estate",
+    "homes for sale",
+    "apartments for sale",
+    "buy property",
+    "sell property",
+    "housing market",
+    "real estate website",
+    "property search",
+    "residential properties",
+    "commercial properties",
+    "property investment",
+  ],
+  authors: [{ name: "Benfort Team", url: "https://benfort.com" }],
+  creator: "Benfort",
+  category: "real estate",
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
     apple: "/apple-touch-icon.png",
   },
-  keywords: [
-    "real estate",
-    "benfort",
-    "property listings",
-    "buy property",
-    "sell property",
-    "luxury homes",
-    "housing market",
-    "real estate website",
-  ],
-  authors: [{ name: "benfort Team", url: "https://benfort.com" }],
-  creator: "benfort",
   openGraph: {
-    title: "benfort Real Estate",
+    title: "Benfort Real Estate",
     description:
-      "Explore the latest property listings, homes, and real estate trends on benfort.",
+      "Explore luxury property listings, real estate trends, and find your dream home with Benfort.",
     url: "https://mcoding-benfort.vercel.app",
-    siteName: "benfort",
+    siteName: "Benfort",
     images: [
       {
-        url: "/public/favicon.svg",
+        url: "https://mcoding-benfort.vercel.app/favicon.svg",
         width: 1200,
         height: 630,
-        alt: "benfort - Real Estate Solutions",
+        alt: "Benfort - Premium Real Estate",
       },
     ],
     locale: "en_US",
@@ -58,11 +69,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "benfort Real Estate",
+    title: "Benfort Real Estate",
     description:
-      "Buy, sell, and explore premium real estate listings on benfort.",
-    images: ["/og-image.jpg"],
-    creator: "@benfortOfficial", // Optional
+      "Discover premium real estate listings and luxury homes for sale on Benfort.",
+    images: ["https://mcoding-benfort.vercel.app/og-image.jpg"],
+    creator: "@benfortOfficial",
   },
   metadataBase: new URL("https://mcoding-benfort.vercel.app"),
 };
