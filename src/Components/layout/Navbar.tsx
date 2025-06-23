@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`z-50 bg-background/80 dark:bg-card backdrop-blur-lg w-full transition-all transform duration-500 relative  ${
+      className={`z-50 bg-background/80 dark:bg-card backdrop-blur-lg w-full transition-all duration-300 relative ${
         isSticky
           ? "sticky top-0 shadow-lg py-1 md:py-2 lg:py-2 xl:py-3"
           : "py-2 md:py-3 lg:py-4 xl:py-6"
