@@ -302,6 +302,7 @@ const Properties = () => {
                         <Switch id="airplane-mode" />
                       </div>
                     </div>
+
                     {/* Category */}
                     <div>
                       <p className="text-[12px] whitespace-nowrap">
@@ -436,103 +437,76 @@ const Properties = () => {
                         </Link>
                       </ul>
                     </div>
+
                     {/* Location */}
                     <div>
                       <p className="text-[12px] whitespace-nowrap">Location</p>
-                      <ul className="gap-2 grid grid-cols-2 xl:grid-cols-3 mt-2 lg:mt-3">
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>Pleasantville</p>
-                        </Link>
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>West Side</p>
-                        </Link>
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>Capitol Hill</p>
-                        </Link>
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>Greenville</p>
-                        </Link>
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>Jersey City</p>
-                        </Link>
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>Catskills</p>
-                        </Link>
-                      </ul>
+                      <div className="gap-2 grid grid-cols-2 xl:grid-cols-3 mt-2 lg:mt-3">
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center cursor-pointer">
+                          Pleasantville
+                        </p>
+
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center cursor-pointer">
+                          West Side
+                        </p>
+
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center cursor-pointer">
+                          Capitol Hill
+                        </p>
+
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center cursor-pointer">
+                          Greenville
+                        </p>
+
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center cursor-pointer">
+                          Jersey City
+                        </p>
+
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center cursor-pointer">
+                          Catskills
+                        </p>
+                      </div>
                     </div>
+
                     {/* PROPERTY TYPE */}
                     <div>
                       <p className="text-[12px] whitespace-nowrap">
                         PROPERTY TYPE
                       </p>
-                      <ul className="gap-2 grid grid-cols-2 xl:grid-cols-3 mt-2 lg:mt-3">
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>Salse</p>
-                        </Link>
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>Lease</p>
-                        </Link>
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>Lend</p>
-                        </Link>
-                      </ul>
+                      <div className="gap-2 grid grid-cols-2 xl:grid-cols-3 mt-2 lg:mt-3">
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center">
+                          Salse
+                        </p>
+
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center">
+                          Lease
+                        </p>
+
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center">
+                          Lend
+                        </p>
+                      </div>
                     </div>
                     {/* bed room */}
                     <div>
                       <p className="text-[12px] whitespace-nowrap">BEDROOM</p>
-                      <ul className="gap-2 grid grid-cols-2 xl:grid-cols-2 mt-2 lg:mt-3">
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>1 Room</p>
-                        </Link>
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>2 Rooms</p>
-                        </Link>
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>3 Rooms</p>
-                        </Link>
-                        <Link
-                          href=""
-                          className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center"
-                        >
-                          <p>4+ Rooms</p>
-                        </Link>
-                      </ul>
+                      <div className="gap-2 grid grid-cols-2 xl:grid-cols-2 mt-2 lg:mt-3">
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center">
+                          1 Room
+                        </p>
+
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center">
+                          2 Rooms
+                        </p>
+
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center">
+                          3 Rooms
+                        </p>
+
+                        <p className="flex flex-col gap-5 lg:gap-6 p-2 lg:p-4 border border-border rounded-[6px] lg:rounded-[8px] text-[12px] text-foreground/60 lg:text-center">
+                          4+ Rooms
+                        </p>
+                      </div>
                     </div>
 
                     {/* price range */}
@@ -664,8 +638,8 @@ const Properties = () => {
                 </div>
 
                 <h2 className="mb-4 font-bold text-2xl">Saved Properties</h2>
-                <table className="mb-4 border border-gray-300 min-w-full">
-                  <thead className="bg-gray-100">
+                <table className="mb-4 border border-border min-w-full">
+                  <thead className="">
                     <tr>
                       <th className="px-4 py-2 border">Title</th>
                       <th className="px-4 py-2 border">Location</th>
@@ -674,7 +648,7 @@ const Properties = () => {
                   </thead>
                   <tbody>
                     {savedProperties.map((property) => (
-                      <tr key={property.id} className="text-center">
+                      <tr key={property.id} className="">
                         <td className="px-4 py-2 border">{property.title}</td>
                         <td className="px-4 py-2 border">
                           {property.location}

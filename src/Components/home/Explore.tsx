@@ -35,13 +35,13 @@ export const Explore = () => {
                     <br className="hidden lg:block" /> home
                   </span>
                 </h2>
-                <div className="relative mx-auto w-fit">
+                <div className="relative mx-auto mt-6 sm:mt-0 w-fit">
                   <Image
                     src={dreamhouseimage}
                     alt="dreamhouseimage"
                     className="min-w-[210px]"
                   />
-                  <div className="top-full left-0 absolute bg-background dark:bg-card px-3 lg:px-[19px] py-3 rounded-[8px] sm:rounded-[16px] -translate-y-1/2">
+                  <div className="top-1/2 sm:top-full left-0 absolute bg-background dark:bg-card px-3 lg:px-[19px] py-3 rounded-[8px] sm:rounded-[16px] -translate-y-[50%] animate-pulse sm:animate-none">
                     <div className="flex">
                       <div className="bg-white/5 shadow-[0px_8px_12px_rgba(0,0,0,0.08)] border-[2px] border-border rounded-full w-fit">
                         <Image src={dream1} alt="dream1" />
@@ -63,8 +63,9 @@ export const Explore = () => {
                 </div>
               </div>
             </FadeIn>
+            {/* tall img */}
             <FadeIn delay={0.3}>
-              <div className="flex flex-col justify-center h-full">
+              <div className="hidden sm:flex flex-col justify-center h-full">
                 <Image
                   src={Background}
                   alt="Background"
@@ -75,7 +76,7 @@ export const Explore = () => {
           </div>
           {/* text */}
           <FadeIn delay={0.4}>
-            <div className="bg-muted dark:bg-card mx-auto mt-12 sm:mt-0 p-3 sm:p-4 lg:p-6 rounded-[12px] lg:rounded-[16px] max-w-[650px] lg:max-w-[428px] h-full content">
+            <div className="bg-muted dark:bg-card mx-auto p-3 sm:p-4 lg:p-6 rounded-[12px] lg:rounded-[16px] max-w-[650px] lg:max-w-[428px] h-full content">
               <p className="mb-16 sm:mb-20 lg:mb-20 font-normal text-[16px] leading-[22px] sm:leading-[24px]">
                 “We believe there&#39;s a perfect home for everybody, no matter
                 the budget. That&#39;s why we always find the best homes for
