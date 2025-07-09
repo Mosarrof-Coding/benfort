@@ -55,7 +55,7 @@ export default function LoginForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-card shadow-shadow shadow-xl p-4 lg:p-6 rounded w-full max-w-sm"
+      className="block bg-card shadow-shadow shadow-xl p-4 lg:p-6 rounded w-full max-w-sm"
     >
       <h2 className="mb-4 font-semibold text-2xl">
         {isLogin ? "Login" : "Sign Up"}
