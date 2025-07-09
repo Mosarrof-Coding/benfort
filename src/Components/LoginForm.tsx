@@ -10,44 +10,46 @@ export default function LoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false); // Start with Sign Up page
+  const [registeredUser, setRegisteredUser] = useState<{
+    email: string;
+    password: string;
+  } | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
     setError("");
+    setLoading(true);
 
-    console.log("Form submitted");
-    console.log("Email:", email);
-    console.log("Password:", password);
-    if (!isLogin) console.log("Name:", name);
-
-    try {
-      const endpoint = isLogin ? "/api/login" : "/api/signup";
-      const body = isLogin ? { email, password } : { name, email, password };
-
-      const res = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-      });
-
-      const data = await res.json();
-      console.log("API response:", data);
-
-      if (!res.ok) throw new Error(data.message || "Something went wrong");
-
-      alert(`${isLogin ? "Login" : "Signup"} successful!`);
-    } catch (err) {
-      if (err instanceof Error) {
-        console.error("Error:", err.message);
-        setError(err.message);
+    setTimeout(() => {
+      if (!isLogin) {
+        // Signup logic
+        if (!email || !password || !name) {
+          setError("Please fill in all fields.");
+        } else {
+          // Save user in local state
+          setRegisteredUser({ email, password });
+          alert("Signup successful! Redirecting to login...");
+          setIsLogin(true);
+          setEmail("");
+          setPassword("");
+          setName("");
+        }
       } else {
-        setError("An unknown error occurred");
+        // Login logic
+        if (
+          registeredUser &&
+          email === registeredUser.email &&
+          password === registeredUser.password
+        ) {
+          alert("Login successful!");
+        } else {
+          setError("Invalid email or password.");
+        }
       }
-    } finally {
+
       setLoading(false);
-    }
+    }, 800); // Simulate delay
   };
 
   return (
@@ -102,7 +104,7 @@ export default function LoginForm() {
 
       <button
         type="submit"
-        className="py-2 border border-border rounded w-full transition"
+        className="py-2 border hover:bg-border border-border rounded w-full transition cursor-pointer"
         disabled={loading}
       >
         {loading ? "Processing..." : isLogin ? "Login" : "Sign Up"}
@@ -112,13 +114,17 @@ export default function LoginForm() {
         {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
         <button
           type="button"
-          onClick={() => setIsLogin(!isLogin)}
+          onClick={() => {
+            setIsLogin(!isLogin);
+            setError("");
+          }}
           className="text-destructive"
         >
           {isLogin ? "Create Account" : "Login"}
         </button>
       </p>
-      {isLogin && (
+
+      {!isLogin && (
         <>
           <h3 className="my-4 text-xl">Or login with</h3>
           <div className="flex items-center gap-3">

@@ -9,7 +9,7 @@ export const Cards = () => {
   return (
     <>
       {PropertyData.map((card, i) => (
-        <FadeIn key={card.id} delay={i * 0.2}>
+        <FadeIn key={card.id} delay={i * 0.12}>
           <div className="mx-auto pb-4 lg:pb-6 w-full perkCard">
             <div className="relative w-full">
               <Link href={`/property/${card.id}`}>

@@ -22,7 +22,7 @@ const MyForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-background mx-auto p-4 md:p-8 lg:p-14 max-w-[903px] text-foreground"
+      className="block bg-background mx-auto p-4 md:p-8 lg:p-14 max-w-[903px] text-foreground"
     >
       <h5 className="mb-0.5 font-normal text-[16px] sm:text-[18px]">
         Contact us today if you’d like to know more about how we help buy, sell
@@ -33,7 +33,9 @@ const MyForm = () => {
           <Input
             id="name"
             value={name}
+            name="name"
             onChange={(e) => setName(e.target.value)}
+            required
             placeholder="Enter name"
             className="dark:bg-transparent px-2 lg:px-3 py-2 lg:py-4 border border-border rounded-[4px] focus-visible:ring-[1px] font-normal text-[14px] text-input placeholder:text-[#999999] leading-[16px]"
           />
@@ -41,6 +43,8 @@ const MyForm = () => {
           <Input
             id="email"
             type="email"
+            name="email"
+            required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter email"

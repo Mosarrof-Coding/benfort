@@ -19,7 +19,7 @@ const Category: React.FC<CategoryProps> = ({ category }) => {
   return (
     <>
       {category.map((item, i) => (
-        <FadeIn key={item.id} delay={i * 0.2}>
+        <FadeIn key={item.id} delay={i * 0.12}>
           <div className="inline-block pb-4 lg:pb-6 w-[260px] sm:w-[320px] h-full perkCard">
             <div className="relative w-full">
               <Link

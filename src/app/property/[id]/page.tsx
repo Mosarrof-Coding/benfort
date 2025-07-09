@@ -28,10 +28,10 @@ const PropertyDetails = ({ params }: PropertyDetailsProps) => {
     }
   };
 
-  // find it's items to details
+  // fin items to it's details
   const property = PropertyData.find((item) => item.id === id);
 
-  // filter cateogory by title
+  // filter cateogory by roomType
   const category = PropertyData.filter(
     (sorted) => sorted.roomType[0] === property?.roomType[0]
   );
