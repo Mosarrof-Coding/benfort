@@ -27,6 +27,7 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-border: var(--border);
+  --color-shadow: var(--shadow);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-chart-1: var(--chart-1);
@@ -48,6 +49,7 @@
   --popover: hsl(0, 0%, 96%);
   --destructive: hsl(18, 100%, 57%);
   --border: hsla(231, 11%, 12%, 0.13);
+  --shadow: hsla(0, 0%, 86%, 0.541);
 
   --card-foreground: hsl(0, 0%, 14.5%);
   --popover-foreground: hsl(0, 0%, 14.5%);
@@ -80,6 +82,7 @@
   --card-foreground: hsl(0, 0%, 98.5%);
   --input: hsla(0, 0%, 100%, 0.869);
   --border: hsla(0, 0%, 100%, 0.13);
+  --shadow: hsla(0, 0%, 88%, 0.191);
 
   --popover: hsl(0, 0%, 20.5%);
   --popover-foreground: hsl(0, 0%, 98.5%);
